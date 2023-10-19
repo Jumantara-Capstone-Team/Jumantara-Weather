@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('main');
 });
+
+// Cara membuat rouute untuk frontend tanpa membuat controlle dan model
+
+// Route::get('informasi', function() {
+//     return view('informasi');
+// });
+
+// untuk return view adalah nama dari halaman blade
