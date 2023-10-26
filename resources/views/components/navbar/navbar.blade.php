@@ -1,8 +1,7 @@
 <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="/" class="logo d-flex align-items-center">
-            <img src="{{ asset('img/navbar/logo.png') }}" alt="">
-            <span>Info Cuaca</span>
+            <img src="{{ asset('img/main/logo.png') }}" alt="" style="max-height: 40px; margin-right: 10px;">
         </a>
         <nav id="navbar" class="navbar">
             <ul>
