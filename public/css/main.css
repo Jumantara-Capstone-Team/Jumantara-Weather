@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    /*
+        nav-bar
+    */
+
+.nav-bar {
+    padding: 30px 16px;
+    background-color: #1E202C;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    top: 0;
+    z-index: 99;
+} 
+
+.nav-bar .nav-bar_brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-bar_brand h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+}
+
+.nav-bar .nav-bar_navigation {
+    position: absolute;
+    top: 50px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    overflow: hidden;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.nav-bar .nav-bar_navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+.nav-bar .nav-bar_navigation ul {
+    list-style: none; /* Menghilangkan bullet point pada daftar */
+    padding: 0;
+}
+
+.nav-bar .nav-bar_navigation ul li {
+    margin: 0;
+}
