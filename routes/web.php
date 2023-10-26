@@ -24,3 +24,7 @@ Route::get('/', function () {
 // });
 
 // untuk return view adalah nama dari halaman blade
+
+Route::fallback(function () {
+    return view('error/404');
+});
