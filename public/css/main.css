@@ -20,6 +20,7 @@ a:hover {
 }
 
 /* Header */
+
 .header {
     background-color: #29236c;
     color: #fff;
@@ -91,3 +92,37 @@ a:hover {
 }
 
 /* Sudah Responsif tetapi icon hamburger tidak muncul, yg di perbaiki adalah code dari navbar saja  */
+.search-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px 40px 10px 10px;
+    color: whitesmoke;
+    background-color: #0c0844;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    height: 20px;
+}
+
+.search-input::placeholder {
+    color: whitesmoke;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #1a1192;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0c0844;
+}

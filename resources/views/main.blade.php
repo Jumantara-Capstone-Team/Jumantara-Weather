@@ -8,9 +8,14 @@ untuk yg di maksud components.head.head adalah dimana letak sebuah file nya dan 
 @include('components.navbar.navbar')
 
 <body>
-
-
-
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Apa Yang Kamu Cari  Hayoo?">
+        <button class="search-button">Search</button>
+    </div>
+    <section class="sepuh" id="sepuh">
+        @include('components.beranda.suhu.suhu')
+        @include('components.beranda.news.news')
+    </section>
 </body>
 @include('components.footer.footer')
 

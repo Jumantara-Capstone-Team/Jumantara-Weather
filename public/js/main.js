@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById("navbar");
 
     mobileNavToggle.addEventListener("click", function () {
-        navbar.classList.toggle("active"); // Tambahkan kelas "active" pada elemen navbar saat hamburger diklik
+        navbar.classList.toggle("active");
     });
 });

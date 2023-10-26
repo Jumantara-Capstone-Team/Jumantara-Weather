@@ -1,0 +1,34 @@
+.card {
+    border: 1px solid #ccc;
+    background-color: #29236c !important;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px auto;
+    background-color: #fff;
+}
+
+.card h2 {
+    text-align: left;
+}
+
+.card .day {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.day p {
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.day p + p {
+    margin-left: 20px;
+}
