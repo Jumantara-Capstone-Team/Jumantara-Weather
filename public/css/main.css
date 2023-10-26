@@ -1,71 +1,91 @@
-* {
-    padding: 0;
-    margin: 0;
-    
-}
-
+/* Reset CSS */
+html,
 body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-    /*
-        nav-bar
-    */
-
-.nav-bar {
-    padding: 30px 16px;
-    background-color: #1E202C;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 10px;
-    top: 0;
-    z-index: 99;
-} 
-
-.nav-bar .nav-bar_brand {
-    display: flex;
-    align-items: center;
-}
-
-.nav-bar .nav-bar_brand h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 22px;
-    user-select: none;
-}
-
-.nav-bar .nav-bar_navigation {
-    position: absolute;
-    top: 50px;
-    width: 150px;
-    transition: all 0.3s;
-    padding: 8px;
-    overflow: hidden;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.nav-bar .nav-bar_navigation ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    padding: 16px;
-    margin-bottom: 5px;
-    width: 100%;
-    text-align: center;
-  }
-
-.nav-bar .nav-bar_navigation ul {
-    list-style: none; /* Menghilangkan bullet point pada daftar */
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    overflow-x: hidden;
+    margin: 0;
     padding: 0;
 }
 
-.nav-bar .nav-bar_navigation ul li {
+/* Tautan */
+a {
+    color: #4154f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #717ff5;
+}
+
+/* Header */
+.header {
+    background-color: #29236c;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo img {
+    max-height: 40px;
+}
+
+.logo span {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
     margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ikon toggle mobile */
+.mobile-nav-toggle {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Navbar responsif */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
 }
