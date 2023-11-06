@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\{
+        PostController
+};
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +20,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('main');
 });
+
+// Route News
+Route::get('/berita', [PostController::class, 'index'])->name('berita.index');
+Route::get('/berita/{category}', [PostController::class, 'index'])->name('berita.category');
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
+Route::get('/berita/search', [PostController::class, 'search'])->name('berita.search');
 
 // Cara membuat rouute untuk frontend tanpa membuat controlle dan model
 

@@ -7,7 +7,7 @@
             <ul>
                 <li><a class="nav-link" href="/">Beranda</a></li>
                 <li><a class="nav-link" href="/Weather">Weather</a></li>
-                <li><a class="nav-link" href="/News">News</a></li>
+                <li><a class="nav-link" href="/berita">News</a></li>
                 <li><a class="nav-link" href="/Radar">Radar</a></li>
                 <li><a class="nav-link" href="/Air-Quality">Air Quality</a></li>
             </ul>
