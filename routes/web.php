@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
+    AuthController,
         PostController
 };
 
@@ -37,4 +38,14 @@ Route::get('/berita/search', [PostController::class, 'search'])->name('berita.se
 
 Route::fallback(function () {
     return view('error/404');
+});
+
+// Login Route
+Route::get('login', fn() => view('login.login', ["title" => "Login"]))->name('login');
+Route::post('login', [AuthController::class, 'login']);
+
+// Authenticated Routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard', fn() => view('admin.dashboard', ["title" => "Dashboard"]))->name('dashboard');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
