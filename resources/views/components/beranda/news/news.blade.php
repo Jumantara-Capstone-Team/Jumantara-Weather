@@ -5,26 +5,26 @@
     <div class="news-container">
 
         <div class="news-card">
-            <img class="news-img" src="{{ asset('img/contoh.jpeg') }}" alt="Gambar Berita 1">
-            <div class="news-title">Berita 1</div>
+            <img class="news-img" src="{{ asset('img/contoh.jpeg') }}" alt="Gambar Berita 1"> 
             <div class="news-content">
-                Ini adalah isi berita pertama.
+            <div class="news-title">Berita 1</div>
+                <p>Ini adalah isi berita kedua.</p>
             </div>
         </div>
 
         <div class="news-card">
             <img class="news-img" src="{{ asset('img/contoh.jpeg') }}" alt="Gambar Berita 2">
-            <div class="news-title">Berita 2</div>
             <div class="news-content">
-                Ini adalah isi berita kedua.
+            <div class="news-title">Berita 2</div>
+                <p>Ini adalah isi berita kedua.</p>
             </div>
         </div>
 
         <div class="news-card">
             <img class="news-img" src="{{ asset('img/contoh.jpeg') }}" alt="Gambar Berita 3">
-            <div class="news-title">Berita 3</div>
             <div class="news-content">
-                Ini adalah isi berita ketiga.
+            <div class="news-title">Berita 3</div>
+                <p>Ini adalah isi berita kedua.</p>
             </div>
         </div>
     </div>

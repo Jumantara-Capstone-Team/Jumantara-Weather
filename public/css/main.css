@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+.sepuh {
+    background-color:#1E202C ;
+}
+
 /* Tautan */
 a {
     color: #4154f1;
@@ -15,14 +19,17 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #717ff5;
+li:hover {
+    color: white;
+    background-color: #4154f1;
+    outline-color: #4154f1;
+    outline-width: 2px;
 }
 
 /* Header */
 
 .header {
-    background-color: #29236c;
+    background-color: #1E202C;
     color: #fff;
     padding: 10px 0;
 }
@@ -32,7 +39,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 25px auto;
     padding: 0 20px;
 }
 
@@ -56,7 +63,7 @@ a:hover {
 }
 
 .navbar li {
-    margin-right: 20px;
+    margin-right: 70px;
 }
 
 .nav-link {
@@ -71,6 +78,8 @@ a:hover {
     color: #fff;
     cursor: pointer;
 }
+
+
 
 /* Navbar responsif */
 @media (max-width: 768px) {
@@ -92,19 +101,27 @@ a:hover {
 }
 
 /* Sudah Responsif tetapi icon hamburger tidak muncul, yg di perbaiki adalah code dari navbar saja  */
-.search-container {
-    margin-top: 40px;
-    display: flex;
+.image_banner {
+    background-image: url('../img/contoh-banner.jpg');
+    min-height: 400px;
+    margin-top: 0;
     justify-content: center;
+    display: flex;
     align-items: center;
+}
+
+.search-container {
+    display: flex;
+    gap: 0;
+
 }
 
 .search-input {
     padding: 10px 40px 10px 10px;
-    color: whitesmoke;
-    background-color: #0c0844;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    /* color: whitesmoke; */
+    background-color: #1E202C;
+    /* border: 1px solid #ccc; */
+    border-radius: 30px 0 0 30px;
     width: 400px;
     height: 20px;
 }
@@ -115,10 +132,10 @@ a:hover {
 
 .search-button {
     padding: 10px 20px;
-    background-color: #1a1192;
+    background-color: #139EEA;
     color: #fff;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 30px 30px 0;
     cursor: pointer;
     transition: background-color 0.3s;
 }
