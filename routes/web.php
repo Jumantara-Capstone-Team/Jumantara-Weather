@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
     AuthController,
-        PostController
+    PostController,
+    DashboardPostController
 };
 
 /*
@@ -28,14 +29,6 @@ Route::get('/berita/{category}', [PostController::class, 'index'])->name('berita
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/berita/search', [PostController::class, 'search'])->name('berita.search');
 
-// Cara membuat rouute untuk frontend tanpa membuat controlle dan model
-
-// Route::get('informasi', function() {
-//     return view('informasi');
-// });
-
-// untuk return view adalah nama dari halaman blade
-
 Route::fallback(function () {
     return view('error/404');
 });
@@ -48,4 +41,11 @@ Route::post('login', [AuthController::class, 'login']);
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', fn() => view('admin.dashboard', ["title" => "Dashboard"]))->name('dashboard');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::prefix('dashboard')->group(function () {
+        Route::get('posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
+        Route::resource('posts', DashboardPostController::class);
+    });
 });
