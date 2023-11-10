@@ -41,8 +41,7 @@ class DashboardPostController extends Controller
         'title' => 'required|max:255',
         'slug' => 'required|unique:posts',
         'image' => 'image|file|max:5000',
-        'body' => 'required',
-        'nama_bidang' => 'max:255'
+        'body' => 'required'
     ]);
 
     if ($request->file('image')) {
@@ -90,7 +89,6 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'image' => 'image|file|max:5000',
             'body' => 'required',
-            'nama_bidang' => 'max:255'
         ];
     
         if ($request->slug != $post->slug) {
