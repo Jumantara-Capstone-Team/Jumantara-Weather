@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Data Table News | Jumantara</title>
 
     <link href="{{ asset('/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/img/icon.png') }}" rel="apple-touch-icon">
@@ -120,7 +120,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Jumantara 2023</span>
                     </div>
                 </div>
             </footer>
