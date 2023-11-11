@@ -2,15 +2,13 @@
 html,
 body {
     font-family: "Open Sans", sans-serif;
-    color: #444444;
+    color: white;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 
-.sepuh {
-    background-color:#1E202C ;
-}
+
 
 /* Tautan */
 a {
@@ -103,6 +101,7 @@ li:hover {
 /* Sudah Responsif tetapi icon hamburger tidak muncul, yg di perbaiki adalah code dari navbar saja  */
 .image_banner {
     background-image: url('../img/contoh-banner.jpg');
+    background-size: cover;
     min-height: 400px;
     margin-top: 0;
     justify-content: center;

@@ -1,4 +1,104 @@
-.card {
+.img {
+    border: 0;
+}
+
+.container {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 40px;
+   padding-right: 40px; 
+}
+
+.suhu-container {
+    background: #323544;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: -150px;
+    margin-bottom: 50px;
+}
+
+.suhu-container .suhu.today {
+    width: 420px;
+    border-radius: 0 10px 10px 0;
+}
+
+.suhu-container .suhu .suhu-header {
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    height: 20px;
+}
+
+.suhu-container .today.suhu {
+    
+}
+
+.suhu-container .suhu.today .suhu-header .day {
+    float: left;
+}
+
+.suhu-container .suhu.today .suhu-header .date {
+    float: right;
+}
+
+.suhu-container .suhu.today .suhu-content {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.suhu-container .suhu .suhu-content {
+    padding: 50px 20px 10px;
+    text-align: center;
+}
+
+.suhu-container .suhu.today .location {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.suhu-container .suhu .suhu-content .degree {
+    font-size: 1.7em;
+    color: white;
+    font-weight: 700;
+}
+
+.suhu-container .suhu.today .degree .num {
+    font-size: 6.4rem;
+    margin-right: 30px;
+}
+
+.suhu-container .suhu.today .degree .num, .suhu-container .suhu.today .degree .suhu-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.suhu-container .suhu .suhu-content .suhu-icon {
+    margin-bottom: 20px;
+}
+
+.suhu-container .suhu .suhu-icon {
+    height: 50px;
+}
+
+.suhu-container .suhu:nth-child(even){
+    background-color: #262936;
+}
+
+.suhu-container .suhu {
+    display: table-cell;
+    vertical-align: top;
+}
+
+
+
+
+
+/* .card {
     border: 1px solid #ccc;
     background-color: #29236c !important;
     color: #fff;
@@ -10,7 +110,7 @@
     width: 80%;
     margin: 30px auto;
     background-color: #fff;
-}
+} */
 
 .card h2 {
     text-align: left;
