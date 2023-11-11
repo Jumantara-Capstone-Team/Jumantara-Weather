@@ -25,11 +25,8 @@ class DashboardPostController extends Controller
      */
     public function create()
 {
-    $categories = Category::all(); // Mengambil semua kategori dari database
 
-    return view('admin.posts.create', [
-        'categories' => $categories
-    ]);
+    return view('admin.posts.create');
 }
 
     /**
