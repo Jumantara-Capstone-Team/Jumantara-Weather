@@ -10,114 +10,114 @@
                     <div class="location">Jakarta, Indonesia</div>
                     <div class="degree">
                         <div class="num">
-                        29
-                        <sup>o</sup>
-                        C
+                            29
+                            <sup>o</sup>
+                            C
                         </div>
+                        <div class="suhu-icon">
+                            <img src="..\public\img\icons\icon-1.svg">
+                        </div>
+                    </div>
+                    <p>Kelembaban: <span id="humidity">Loading...</span></p>
+                    <p>Perkiraan cuaca: <span id="weather">Loading...</span></p>
+                </div>
+            </div>
+            <div class="suhu">
+                <div class="suhu-header">
+                    <div class="day">Selasa</div>
+                </div>
+                <div class="suhu-content">
                     <div class="suhu-icon">
                         <img src="..\public\img\icons\icon-1.svg">
                     </div>
+                    <div class="degree">
+                        27
+                        <sup>o</sup>
+                        C
+                    </div>
                 </div>
-                <p>Kelembaban: <span id="humidity">Loading...</span></p>
-                <p>Perkiraan cuaca: <span id="weather">Loading...</span></p>
             </div>
-        </div>
-        <div class="suhu">
-            <div class="suhu-header">
-                <div class="day">Selasa</div>
-            </div>
-            <div class="suhu-content">
-                <div class="suhu-icon">
-                    <img src="..\public\img\icons\icon-1.svg">
-                </div>
-                <div class="degree">
-                    27
-                    <sup>o</sup>
-                    C
-                </div>
-            </div>    
-        </div>
 
-        <div class="suhu">
-            <div class="suhu-header">
-                <div class="day">Rabu</div>
+            <div class="suhu">
+                <div class="suhu-header">
+                    <div class="day">Rabu</div>
+                </div>
+                <div class="suhu-content">
+                    <div class="suhu-icon">
+                        <img src="..\public\img\icons\icon-1.svg">
+                    </div>
+                    <div class="degree">
+                        27
+                        <sup>o</sup>
+                        C
+                    </div>
+                </div>
             </div>
-            <div class="suhu-content">
-                <div class="suhu-icon">
-                    <img src="..\public\img\icons\icon-1.svg">
-                </div>
-                <div class="degree">
-                    27
-                    <sup>o</sup>
-                    C
-                </div>
-            </div>    
-        </div>
 
-        <div class="suhu">
-            <div class="suhu-header">
-                <div class="day">Kamis</div>
+            <div class="suhu">
+                <div class="suhu-header">
+                    <div class="day">Kamis</div>
+                </div>
+                <div class="suhu-content">
+                    <div class="suhu-icon">
+                        <img src="..\public\img\icons\icon-1.svg">
+                    </div>
+                    <div class="degree">
+                        27
+                        <sup>o</sup>
+                        C
+                    </div>
+                </div>
             </div>
-            <div class="suhu-content">
-                <div class="suhu-icon">
-                    <img src="..\public\img\icons\icon-1.svg">
-                </div>
-                <div class="degree">
-                    27
-                    <sup>o</sup>
-                    C
-                </div>
-            </div>    
-        </div>
 
-        <div class="suhu">
-            <div class="suhu-header">
-                <div class="day">Jumat</div>
+            <div class="suhu">
+                <div class="suhu-header">
+                    <div class="day">Jumat</div>
+                </div>
+                <div class="suhu-content">
+                    <div class="suhu-icon">
+                        <img src="..\public\img\icons\icon-1.svg">
+                    </div>
+                    <div class="degree">
+                        27
+                        <sup>o</sup>
+                        C
+                    </div>
+                </div>
             </div>
-            <div class="suhu-content">
-                <div class="suhu-icon">
-                    <img src="..\public\img\icons\icon-1.svg">
-                </div>
-                <div class="degree">
-                    27
-                    <sup>o</sup>
-                    C
-                </div>
-            </div>    
-        </div>
 
-        <div class="suhu">
-            <div class="suhu-header">
-                <div class="day">Sabtu</div>
+            <div class="suhu">
+                <div class="suhu-header">
+                    <div class="day">Sabtu</div>
+                </div>
+                <div class="suhu-content">
+                    <div class="suhu-icon">
+                        <img src="..\public\img\icons\icon-1.svg">
+                    </div>
+                    <div class="degree">
+                        27
+                        <sup>o</sup>
+                        C
+                    </div>
+                </div>
             </div>
-            <div class="suhu-content">
-                <div class="suhu-icon">
-                    <img src="..\public\img\icons\icon-1.svg">
-                </div>
-                <div class="degree">
-                    27
-                    <sup>o</sup>
-                    C
-                </div>
-            </div>    
-        </div>
 
-        <div class="suhu">
-            <div class="suhu-header">
-                <div class="day">Minggu</div>
+            <div class="suhu">
+                <div class="suhu-header">
+                    <div class="day">Minggu</div>
+                </div>
+                <div class="suhu-content">
+                    <div class="suhu-icon">
+                        <img src="..\public\img\icons\icon-1.svg">
+                    </div>
+                    <div class="degree">
+                        27
+                        <sup>o</sup>
+                        C
+                    </div>
+                </div>
             </div>
-            <div class="suhu-content">
-                <div class="suhu-icon">
-                    <img src="..\public\img\icons\icon-1.svg">
-                </div>
-                <div class="degree">
-                    27
-                    <sup>o</sup>
-                    C
-                </div>
-            </div>    
-        </div>
-            
+
 
             <!-- <div class="monday">
                 <h2>Informasi Suhu Cuaca Terkini</h2>
@@ -156,6 +156,6 @@
                 // Panggil fungsi getWeatherData saat halaman dimuat
                 getWeatherData();
             </script>
-            </div>
         </div>
+    </div>
 </section>
