@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Meta SEO -->
-    <meta name="title" content="Landwind - Tailwind CSS Landing Page" />
+    <meta name="title" content="Jumantara" />
     <meta name="description"
         content="Get started with a free and open-source landing page built with Tailwind CSS and the Flowbite component library." />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
-    <meta name="author" content="Themesberg" />
 
     <!-- Social media share -->
-    <meta property="og:title" content="Landwind - Tailwind CSS Landing Page" />
+    <meta property="og:title" content="Jumantara" />
     <meta property="og:site_name" content="Themesberg" />
     <meta property="og:url" content="https://https://demo.themesberg.com/landwind/" />
     <meta property="og:description"
