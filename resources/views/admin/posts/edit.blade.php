@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create Data News | Jumantara</title>
+    <title> Edit News {{ $post->title }} | Jumantara</title>
 
     <link href="{{ asset('/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/img/icon.png') }}" rel="apple-touch-icon">
@@ -21,6 +21,7 @@
         300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+
 
     <link href="{{ asset('css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
 
@@ -45,14 +46,17 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Create News</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Edit News</h1>
                     <div class="col-lg-8">
-                        <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
+                        <form method="post" action="/dashboard/posts/{{ $post->slug }}" class="mb-5"
+                            enctype="multipart/form-data">
+                            @method('put')
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    id="title" name="title" required autofocus value="{{ old('title') }}">
+                                    id="title" name="title" required autofocus
+                                    value="{{ old('title', $post->title) }}">
                                 @error('title')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -62,16 +66,25 @@
                             <div class="mb-3">
                                 <label for="slug" class="form-label">URL</label>
                                 <input type="text" class="form-control @error('slug') is-invalid @enderror"
-                                    id="slug" name="slug" required value="{{ old('slug') }}">
+                                    id="slug" name="slug" required value="{{ old('slug', $post->slug) }}">
                                 @error('slug')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                 @enderror
                             </div>
+
                             <div class="mb-3">
                                 <label for="image" class="form-label">News Image</label>
-                                <img class="img-preview img-fluid mb-3 col-sm-6">
+                                <input type="hidden" name="oldImage" value="{{ $post->image }}">
+                                @if ($post->image)
+                                    <img src="{{ asset('storage/' . $post->image) }}"
+                                        class="img-preview img-fluid mb-3 col-sm-6 d-block">
+                                @else
+                                    <img class="img-preview img-fluid mb-3 col-sm-6 d-block">
+                                @endif
+
+
                                 <input class="form-control @error('image') is-invalid @enderror" type="file"
                                     id="image" name="image" onchange="previewImage()">
                                 @error('image')
@@ -80,15 +93,17 @@
                                     </div>
                                 @enderror
                             </div>
+
                             <div class="mb-3">
                                 <label for="body" class="form-label">News Content</label>
                                 @error('body')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
-                                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
+                                <input id="body" type="hidden" name="body"
+                                    value="{{ old('body', $post->body) }}">
                                 <trix-editor input="body"></trix-editor>
                             </div>
-                            <button type="submit" class="btn btn-primary">Create News</button>
+                            <button type="submit" class="btn btn-primary">Update News</button>
                         </form>
                     </div>
                 </div>
@@ -162,6 +177,7 @@
             }
         }
     </script>
+
     @include('components/admin/all/all')
 
 </body>

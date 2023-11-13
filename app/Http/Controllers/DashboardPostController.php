@@ -53,7 +53,7 @@ class DashboardPostController extends Controller
 
     $post = Post::create($validatedData);
 
-    return redirect('/dashboard/posts')->with('success', 'New post has been added!');
+    return redirect('/dashboard/posts')->with('success', 'New news has been added!');
 }
 
     /**
@@ -61,7 +61,7 @@ class DashboardPostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('admin.posts.show', [
+        return view('content.news.isi', [
             "title" => "Isi Berita",
             "post" => $post
         ]);
@@ -109,7 +109,7 @@ class DashboardPostController extends Controller
     
         $post->update($validatedData);
     
-        return redirect('/dashboard/posts')->with('success', 'Post has been updated!');
+        return redirect('/dashboard/posts')->with('success', 'News has been updated!');
     }
 
     /**
@@ -121,7 +121,7 @@ class DashboardPostController extends Controller
             Storage::delete($post->image);
         }
         Post::destroy($post->id);
-        return redirect('/dashboard/posts')->with('success', 'Post has been deleted!');
+        return redirect('/dashboard/posts')->with('success', 'News has been deleted!');
     }
 
 
