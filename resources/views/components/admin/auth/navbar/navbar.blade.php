@@ -3,7 +3,8 @@
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <a href="#" class="flex items-center">
                 <img src="{{ asset('img/logo.svg') }}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Tech Code</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Tech
+                    Code</span>
             </a>
             <div class="flex items-center lg:order-2">
                 <button data-collapse-toggle="mobile-menu-2" type="button"
@@ -62,10 +63,10 @@
                                     <a href="{{ route('profile') }}"><i class="fas fa-user"></i> Profil</a>
                                     <!-- Tambahkan ikon user -->
                                 </li>
-                                {{-- <li class="hover:text-blue-500 transition transform duration-300 ease-in-out">
-                                    <a href="{{ route('notifications') }}"><i class="fas fa-bell"></i> Notification</a>
+                                <li class="hover:text-blue-500 transition transform duration-300 ease-in-out">
+                                    <a href="{{ route('activity') }}"><i class="fas fa-bars"></i> Activity-Log</a>
                                     <!-- Tambahkan ikon user -->
-                                </li> --}}
+                                </li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                     style="display: none;">
                                     @csrf
@@ -81,7 +82,7 @@
                         </div>
                         <script src="{{ asset('js/components/UserDropdown.js') }}"></script>
                     @else
-                        <!-- Pengguna belum login -->
+                        {{-- <!-- Pengguna belum login -->
                         <li class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                             <a href="{{ route('register.create') }}"
                                 class="inline-flex justify-center w-full px-7 py-2 text-sm font-medium text-center text-white border bg-blue-700 border-gray-200 rounded-lg sm:w-auto transition duration-300 ease-in-out transform hover:bg-gray-100 hover:text-black hover:scale-105 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
@@ -91,7 +92,7 @@
                                 class="inline-flex justify-center w-full px-7 py-2 text-sm font-medium text-center text-white border bg-blue-700 border-gray-200 rounded-lg sm:w-auto transition duration-300 ease-in-out transform hover:bg-gray-100 hover:text-black hover:scale-105 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                 Login
                             </a>
-                        </li>
+                        </li> --}}
                     @endif
 
 
