@@ -39,4 +39,10 @@ class AuthController extends Controller
     {
         return view ('components.admin.auth.activity');
     }
+
+    public function settings(Request $request)
+    {
+        return view ('components.admin.auth.settings');
+    }
+
 }
