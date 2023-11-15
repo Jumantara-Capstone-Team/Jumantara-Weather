@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AuthController,
     PostController,
-    DashboardPostController
+    DashboardPostController,
+    SearchController
 };
 
 /*
@@ -32,6 +33,8 @@ Route::get('/berita/search', [PostController::class, 'search'])->name('berita.se
 Route::fallback(function () {
     return view('error/404');
 });
+
+Route::get('/search', [SearchController::class, 'index']);
 
 // Login Route
 Route::get('login', fn() => view('login.login', ["title" => "Login"]))->name('login');

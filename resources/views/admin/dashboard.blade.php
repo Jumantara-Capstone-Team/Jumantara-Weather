@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<title>Dashboard Admin | Jumantara</title>
+
 @include('components/admin/head/head')
 
 
