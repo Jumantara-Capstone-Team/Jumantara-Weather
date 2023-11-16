@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
 Route::get('/activity', [AuthController::class, 'activity'])->name('activity');
 Route::get('/settings', [AuthController::class, 'settings'])->name('settings');
+Route::get('/activity', [PostController::class, 'showNotifications'])->name('activity');
 
 // Admin Auth Route
 Route::middleware('auth')->group(function () {

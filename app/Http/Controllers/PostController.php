@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -41,23 +42,15 @@ class PostController extends Controller
             "posts" => $posts
         ]);
     }
+    
+    public function showNotifications()
+    {
+        // Mendapatkan notifikasi dari database
+        $notifications = DB::table('posts')->latest()->get();
 
-    public function showByBidang($nama_bidang)
-{
-    // Anda dapat menyesuaikan model dan kolom yang digunakan sesuai dengan struktur database Anda
-    $posts = Post::where('nama_bidang', $nama_bidang)
-                 ->orderBy('created_at', 'desc')
-                 ->paginate(8);
-                 $name = Name::all(); // Ini adalah definisi variabel $name
-                 $address = Address::all();
-                 $information = Information::all();
-
-    $latestPosts = Post::orderBy('created_at', 'desc')->take(4)->get();
-
-    return view('berita', [
-        "title" => "Berita Bidang $nama_bidang",
-        "posts" => $posts,
-        "latestPosts" => $latestPosts
-    ]);
-}
+        return view('components.admin.auth.activity', [
+            'notifications' => $notifications,
+        ]);
+    }
+    
 }

@@ -63,6 +63,10 @@
                                     <!-- Tambahkan ikon user -->
                                 </li>
                                 <li class="hover:text-blue-500 transition transform duration-300 ease-in-out">
+                                    <a href="{{ route('settings') }}"><i class="fas fa-cogs"></i>Settings</a>
+                                    <!-- Tambahkan ikon user -->
+                                </li>
+                                <li class="hover:text-blue-500 transition transform duration-300 ease-in-out">
                                     <a href="{{ route('activity') }}"><i class="fas fa-bars"></i> Activity-Log</a>
                                     <!-- Tambahkan ikon user -->
                                 </li>
