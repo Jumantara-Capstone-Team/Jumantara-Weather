@@ -1,4 +1,6 @@
 <head>
+
+    <title>Beranda | Info Cuaca</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,10 +22,19 @@
     <link rel="apple-touch-icon" href="{{ asset('logo.png') }}">
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
 
-    <title>Beranda | Info Cuaca</title>
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     {{-- Style Css yang di letakan di dalam folder public yang sudah saya siapakan --}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/berita.css') }}" rel="stylesheet">
     <link href="{{ asset('css/beranda/suhu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/beranda/news.css') }}" rel="stylesheet">
     <link href="{{ asset('css/beranda/footer.css') }}" rel="stylesheet">
