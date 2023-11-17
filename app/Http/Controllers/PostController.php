@@ -13,7 +13,7 @@ class PostController extends Controller
     {
         $posts = Post::orderBy('created_at', 'desc')->paginate(8);
 
-        return view('berita', [
+        return view('content.news.berita', [
             "title" => "Berita",
             "posts" => $posts,
         ]);
@@ -23,7 +23,7 @@ class PostController extends Controller
     {
         $latestPosts = Post::orderBy('created_at', 'desc')->take(4)->get();
 
-        return view('isi-berita.isi-berita', [
+        return view('content.news.isi', [
             "title" => "Isi Berita",
             "post" => $post,
             "latestPosts" => $latestPosts,

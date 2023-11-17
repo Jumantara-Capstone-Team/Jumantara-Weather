@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>News | Jumantara</title>
 
 @include('components.head.head')
 
@@ -26,27 +27,34 @@
         <!-- Kolom Kiri - Detail Berita -->
         <div class="md:w-2/3 md:pr-8 mb-4 md:mb-0 space-y-6">
             <!-- Berita -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="https://placekitten.com/800/400" alt="Gambar Berita"
-                    class="mb-4 w-full h-48 object-cover rounded-md">
-                <h2 class="text-3xl text-black font-bold mb-2">Kucing Lucu Hari Ini</h2>
-                <div class="flex items-center mb-2">
-                    <span class="text-gray-600 text-sm">Author: John Doe</span>
-                    <span class="mx-2">•</span>
-                    <span class="text-gray-600 text-sm">Tanggal: 17 November 2023</span>
+            @foreach ($posts->sortByDesc('created_at') as $post)
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://placekitten.com/800/400" alt="Gambar Berita"
+                        class="mb-4 w-full h-48 object-cover rounded-md">
+                    <h2 class="text-3xl text-gray-700 font-semibold mb-2">
+                        {{ Str::ucfirst(Str::limit($post->title, 40)) }}
+                    </h2>
+                    <div class="flex items-center mb-2">
+                        <span class="text-gray-400 text-sm">
+                            <i class="fas fa-user pr-2"></i> {{ $post->author }}
+                        </span>
+                        <span class="text-gray-400 text-sm ml-4">
+                            <i class="far fa-calendar-alt pr-2"></i>
+                            @if ($post->created_at)
+                                {{ $post->created_at->format('d F Y') }}
+                            @endif
+                        </span>
+
+                    </div>
+                    <p class="text-gray-500">{{ strip_tags($post->body) }}</p>
+                    <a href="#"
+                        class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
+                        Baca Selengkapnya
+                    </a>
+
+
                 </div>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis
-                    corporis, deleniti ipsam repudiandae ducimus enim eius dignissimos, in aperiam maiores natus esse,
-                    itaque veniam temporibus fugit. Ad ea exercitationem provident ullam aspernatur reiciendis ducimus
-                    expedita repellat, blanditiis inventore! Accusantium....</p>
-                <a href="#"
-                    class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
-                    Baca Selengkapnya
-                </a>
-
-
-            </div>
-
+            @endforeach
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <img src="https://placekitten.com/800/400" alt="Gambar Berita"
                     class="mb-4 w-full h-48 object-cover rounded-md">
@@ -115,10 +123,15 @@
                                 <img src="https://placekitten.com/200/100" alt="Gambar Berita"
                                     class="w-16 h-16 object-cover rounded-md">
                                 <div class="ml-4">
-                                    <a href="#" class="text-blue-500 hover:underline">Judul Berita 1</a>
-                                    <p class="text-gray-600">Ringkasan berita...</p>
-                                    <a href="#" class="text-blue-500 hover:underline block mt-2">Baca
-                                        Selengkapnya</a>
+                                    <a href="">
+                                        <p class="text-gray-600">Judul Berita 1</p>
+                                    </a>
+                                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing.</p>
+                                    <a href="#" class="text-blue-500 hover:underline block mt-2">
+                                        Baca Selengkapnya
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -127,10 +140,16 @@
                                 <img src="https://placekitten.com/200/100" alt="Gambar Berita"
                                     class="w-16 h-16 object-cover rounded-md">
                                 <div class="ml-4">
-                                    <a href="#" class="text-blue-500 hover:underline">Judul Berita 2</a>
-                                    <p class="text-gray-600">Ringkasan berita...</p>
-                                    <a href="#" class="text-blue-500 hover:underline block mt-2">Baca
-                                        Selengkapnya</a>
+                                    <a href="">
+                                        <p class="text-gray-600">Judul Berita 1</p>
+                                    </a>
+                                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing.</p>
+                                    <a href="#" class="text-blue-500 hover:underline block mt-2">
+                                        Baca Selengkapnya
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+
                                 </div>
                             </div>
                         </li>
