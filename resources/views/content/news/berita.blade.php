@@ -49,9 +49,8 @@
                     <p class="text-gray-500">{{ strip_tags($post->body) }}</p>
                     <a href="#"
                         class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
-                        Baca Selengkapnya
+                        <p class="ml-2 text-white">Baca Selengkapnya</p>
                     </a>
-
 
                 </div>
             @endforeach
