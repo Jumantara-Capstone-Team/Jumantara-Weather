@@ -35,9 +35,58 @@
                     <span class="mx-2">•</span>
                     <span class="text-gray-600 text-sm">Tanggal: 17 November 2023</span>
                 </div>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec justo
-                    enim.</p>
-                <a href="#" class="text-blue-500 hover:underline mt-2 block">Baca Selengkapnya</a>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis
+                    corporis, deleniti ipsam repudiandae ducimus enim eius dignissimos, in aperiam maiores natus esse,
+                    itaque veniam temporibus fugit. Ad ea exercitationem provident ullam aspernatur reiciendis ducimus
+                    expedita repellat, blanditiis inventore! Accusantium....</p>
+                <a href="#"
+                    class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
+                    Baca Selengkapnya
+                </a>
+
+
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://placekitten.com/800/400" alt="Gambar Berita"
+                    class="mb-4 w-full h-48 object-cover rounded-md">
+                <h2 class="text-3xl text-black font-bold mb-2">Kucing Lucu Hari Ini</h2>
+                <div class="flex items-center mb-2">
+                    <span class="text-gray-600 text-sm">Author: John Doe</span>
+                    <span class="mx-2">•</span>
+                    <span class="text-gray-600 text-sm">Tanggal: 17 November 2023</span>
+                </div>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis
+                    corporis, deleniti ipsam repudiandae ducimus enim eius dignissimos, in aperiam maiores natus esse,
+                    itaque veniam temporibus fugit. Ad ea exercitationem provident ullam aspernatur reiciendis ducimus
+                    expedita repellat, blanditiis inventore! Accusantium....</p>
+                <a href="#"
+                    class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
+                    Baca Selengkapnya
+                </a>
+
+
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://placekitten.com/800/400" alt="Gambar Berita"
+                    class="mb-4 w-full h-48 object-cover rounded-md">
+                <h2 class="text-3xl text-black font-bold mb-2">Kucing Lucu Hari Ini</h2>
+                <div class="flex items-center mb-2">
+                    <span class="text-gray-600 text-sm">Author: John Doe</span>
+                    <span class="mx-2">•</span>
+                    <span class="text-gray-600 text-sm">Tanggal: 17 November 2023</span>
+                </div>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis
+                    corporis, deleniti ipsam repudiandae ducimus enim eius dignissimos, in aperiam maiores natus esse,
+                    itaque veniam temporibus fugit. Ad ea exercitationem provident ullam aspernatur reiciendis ducimus
+                    expedita repellat, blanditiis inventore! Accusantium....</p>
+                <a href="#"
+                    class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
+                    Baca Selengkapnya
+                </a>
+
+
             </div>
             <!-- Tambahkan Berita ke depannya menggunakan database ini hanya cek sticky -->
         </div>
