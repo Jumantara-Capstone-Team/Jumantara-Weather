@@ -142,3 +142,205 @@ li:hover {
 .search-button:hover {
     background-color: #0c0844;
 }
+
+
+/* NEWS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  color: rgb(7, 7, 7);
+}
+
+header.navbar-container {
+  max-width: 1500px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 0.5rem;
+  z-index: 999;
+  position: fixed;
+  background: #ffffff;
+}
+
+header.navbar-container .logo img {
+  width: 50px;
+  border-radius: 99px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #0b1957;
+  color: white;
+}
+
+article section .aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  height: 100vh;
+  max-height: 100%;
+  width: 350px;
+  background-color: #0b1957;
+  display: flex;
+  overflow-y: auto;
+}
+
+article section .search__container {
+  display: flex;
+  padding: 1.5rem 1rem;
+  margin: auto;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+    
+article section .search__title {
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  color: #f8f3ea;
+  margin-bottom: 15px;
+}
+    
+article section .search__input {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  color: #575756;
+  background-color: transparent;
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  color: color(#575756 a(0.8));
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+        
+article section .search__input:hover:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+article {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+article .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+article .content .content-description {
+  flex: 1 1;
+}
+
+article .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+article .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+article .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #0b1957;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+article .content .content-description button:hover {
+  border: 3px solid #0b1957;
+  color: #0b1957;
+  background-color: transparent;
+}
+
+footer {
+  padding: 10px;
+  color: white;
+  background-color: #0b1957;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+      flex-flow: column nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+      justify-content: center;
+  }
+}

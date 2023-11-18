@@ -43,7 +43,7 @@
 
                     <div class="mt-4 text-black">
                         <h3 class="text-2xl font-semibold text-center">Informasi Lainnya</h3>
-                        <p class="mt-4 text-lg">Email: {{ auth()->user()->name }}</p>
+                        <p class="mt-4 text-lg">Name: {{ auth()->user()->name }}</p>
                         <p class="text-lg">Email: {{ auth()->user()->email }}</p>
                         <p class="text-lg">Alamat: Indonesia</p>
                         <p class="text-lg">Id: {{ auth()->user()->id }}</p>
@@ -69,7 +69,6 @@
                     </h2>
                 </div>
             </div>
-
 
         </section>
     @endif

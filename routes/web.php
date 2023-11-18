@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AuthController,
     PostController,
-    DashboardPostController
+    DashboardPostController,
+    SearchController
 };
 
 /*
@@ -33,6 +34,8 @@ Route::fallback(function () {
     return view('error/404');
 });
 
+Route::get('/search', [SearchController::class, 'index']);
+
 // Login Route
 Route::get('login', fn() => view('login.login', ["title" => "Login"]))->name('login');
 Route::post('login', [AuthController::class, 'login']);
@@ -45,6 +48,9 @@ Route::middleware(['auth'])->group(function () {
 
 // Admin Details Route
 Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+Route::get('/activity', [AuthController::class, 'activity'])->name('activity');
+Route::get('/settings', [AuthController::class, 'settings'])->name('settings');
+Route::get('/activity', [PostController::class, 'showNotifications'])->name('activity');
 
 // Admin Auth Route
 Route::middleware('auth')->group(function () {
