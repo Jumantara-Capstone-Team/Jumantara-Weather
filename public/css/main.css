@@ -11,7 +11,7 @@ body {
 
 
 /* Tautan */
-a {
+/* a {
     color: #4154f1;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -26,7 +26,7 @@ li:hover {
 
 /* Header */
 
-.header {
+/* .header {
     background-color: #1E202C;
     color: #fff;
     padding: 10px 0;
@@ -41,7 +41,7 @@ li:hover {
     padding: 0 20px;
 }
 
-/* Logo */
+/* Logo 
 .logo img {
     max-height: 40px;
 }
@@ -52,7 +52,7 @@ li:hover {
     margin-left: 10px;
 }
 
-/* Navbar */
+/* Navbar 
 .navbar ul {
     list-style: none;
     margin: 0;
@@ -68,14 +68,14 @@ li:hover {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-}
+} */
 
-/* Ikon toggle mobile */
+/* Ikon toggle mobile 
 .mobile-nav-toggle {
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
-}
+} */
 
 
 
