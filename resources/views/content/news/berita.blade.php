@@ -20,15 +20,29 @@
 
 @include('components.navbar.navbar')
 
+<!-- ======= Breadcrumbs ======= -->
+<section class="bg-black text-white py-4">
+    <div class="container text-center">
+        <h2 class="text-2xl font-bold">Weather News Jumantara</h2>
+        <p class="text-base mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem amet veniam sit
+            voluptatibus
+            provident quis, enim modi doloremque quae quam.</p>
+    </div>
+</section><!-- End Breadcrumbs -->
+
+
+
 <body class="bg-gray-100 font-sans mt-32">
+
 
     <div class="container mx-auto p-4 md:p-8 flex flex-col md:flex-row">
 
         <!-- Kolom Kiri - Detail Berita -->
         <div class="md:w-2/3 md:pr-8 mb-4 md:mb-0 space-y-6">
+
             <!-- Berita -->
             @foreach ($posts->sortByDesc('created_at') as $post)
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-xl shadow-md">
                     <img src="https://placekitten.com/800/400" alt="Gambar Berita"
                         class="mb-4 w-full h-48 object-cover rounded-md">
                     <h2 class="text-3xl text-gray-700 font-semibold mb-2">
@@ -47,56 +61,35 @@
 
                     </div>
                     <p class="text-gray-500">{{ strip_tags($post->body) }}</p>
-                    <a href="#"
-                        class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
-                        <p class="ml-2 text-white">Baca Selengkapnya</p>
+                    <a href="/posts/{{ $post->slug }}"
+                        class="text-white block mt-2 p-1 border border-blue-500 rounded-xl bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
+                        <p class="ml-2  text-white">Baca Selengkapnya</p>
                     </a>
 
                 </div>
             @endforeach
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="https://placekitten.com/800/400" alt="Gambar Berita"
-                    class="mb-4 w-full h-48 object-cover rounded-md">
-                <h2 class="text-3xl text-black font-bold mb-2">Kucing Lucu Hari Ini</h2>
-                <div class="flex items-center mb-2">
-                    <span class="text-gray-600 text-sm">Author: John Doe</span>
-                    <span class="mx-2">•</span>
-                    <span class="text-gray-600 text-sm">Tanggal: 17 November 2023</span>
-                </div>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis
-                    corporis, deleniti ipsam repudiandae ducimus enim eius dignissimos, in aperiam maiores natus esse,
-                    itaque veniam temporibus fugit. Ad ea exercitationem provident ullam aspernatur reiciendis ducimus
-                    expedita repellat, blanditiis inventore! Accusantium....</p>
-                <a href="#"
-                    class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
-                    Baca Selengkapnya
-                </a>
 
+            <div class="flex justify-center items-center my-4 border-t-2 border-b-2 border-gray-300 py-4">
+                <ul class="flex space-x-4">
+                    @if ($posts->previousPageUrl())
+                        <li>
+                            <a href="{{ $posts->previousPageUrl() }}"
+                                class="text-lg text-white border-blue-700 p-2 bg-blue-700 rounded-xl text-blue-500 hover:bg-blue-600 transition-all duration-300 ease-in-out">Previous</a>
+                        </li>
+                    @endif
 
+                    @if ($posts->nextPageUrl())
+                        <li>
+                            <a href="{{ $posts->nextPageUrl() }}"
+                                class="text-lg text-white border-blue-700 p-2 bg-blue-700 rounded-xl text-blue-500 hover:bg-blue-600 transition-all duration-300 ease-in-out">Next</a>
+                        </li>
+                    @endif
+                </ul>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="https://placekitten.com/800/400" alt="Gambar Berita"
-                    class="mb-4 w-full h-48 object-cover rounded-md">
-                <h2 class="text-3xl text-black font-bold mb-2">Kucing Lucu Hari Ini</h2>
-                <div class="flex items-center mb-2">
-                    <span class="text-gray-600 text-sm">Author: John Doe</span>
-                    <span class="mx-2">•</span>
-                    <span class="text-gray-600 text-sm">Tanggal: 17 November 2023</span>
-                </div>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis
-                    corporis, deleniti ipsam repudiandae ducimus enim eius dignissimos, in aperiam maiores natus esse,
-                    itaque veniam temporibus fugit. Ad ea exercitationem provident ullam aspernatur reiciendis ducimus
-                    expedita repellat, blanditiis inventore! Accusantium....</p>
-                <a href="#"
-                    class="text-white block mt-2 p-1 border border-blue-500 rounded bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
-                    Baca Selengkapnya
-                </a>
-
-
-            </div>
             <!-- Tambahkan Berita ke depannya menggunakan database ini hanya cek sticky -->
         </div>
+
 
         <!-- Kolom Kanan - Pencarian dan Daftar Berita -->
         <div id="sticky-container" class="md:w-1/3 md:pl-8">
