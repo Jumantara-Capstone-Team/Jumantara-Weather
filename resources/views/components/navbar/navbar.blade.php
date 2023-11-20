@@ -1,21 +1,21 @@
-<header id="header" class="header fixed-top">
-    <div class="container-navbar">
+<header id="header" class="site-header fixed-top">
+    <div class="container">
         <a href="/" class="branding">
-            <img src="{{ asset('img/main/logo.png') }}" alt="" style="max-height: 40px; margin-right: 10px;">
+            <img src="{{ asset('img/main/logo.png') }}" alt="" class="logo">
         </a>
 
-        <div class="main-navbar">
+        <div class="main-navigation">
             <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 			<ul class="menu">
-                <li class="nav-link"><a href="/">Beranda</a></li>
-                <li class="nav-link"><a href="/Weather">Cuaca</a></li>
-                <li class="nav-link"><a href="/berita">Berita</a></li>
-                <li class="nav-link"><a href="/Radar">Radar</a></li>
-                <li class="nav-link"><a href="/Air-Quality">Air Quality</a></li>
+                <li class="menu-item"><a href="/">Beranda</a></li>
+                <li class="menu-item"><a href="/Weather">Cuaca</a></li>
+                <li class="menu-item"><a href="/berita">Berita</a></li>
+                <li class="menu-item"><a href="/Radar">Radar</a></li>
+                <li class="menu-item"><a href="/Air-Quality">Air Quality</a></li>
             </ul>
         </div>
 
-        <div class="mobile-navbar"></div>
+        <div class="mobile-navigation"></div>
 
     </div>
 </header>

@@ -8,14 +8,180 @@ body {
     padding: 0;
 }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
 
+
+.fullwidth-block {
+  padding: 70px 0; }
+  .fullwidth-block .section-title {
+    font-size: 36px;
+    font-size: 2.5714285714em;
+    font-weight: 300;
+    color: black; }
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  *zoom: 1; }
+    .row:after {
+       content: " ";
+       clear: both;
+       display: block;
+       overflow: hidden;
+       height: 0; }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+
+  .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        zoom : 1; }
+        .container:after {
+          content: " ";
+          clear: both;
+          display: block;
+          overflow: hidden;
+          height: 0; }
+        @media (min-width: 768px) {
+          .container {
+            width: 750px; } }
+        @media (min-width: 992px) {
+          .container {
+            width: 970px; } }
+        @media (min-width: 1200px) {
+          .container {
+            width: 1170px; } }   
+            
+            .button, form input[type="submit"], form button, form input[type="reset"] {
+              border: none;
+              background: #009ad8;
+              padding: 10px 20px;
+              border-radius: 30px;
+              color: white; }
+
+.hero {
+
+  min-height: 500px;
+  width: 100%;
+  display: block;
+}
+
+.hero .hero-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Header NavBar */
+
+.site-header {
+  padding: 50px 0; 
+  background-color:white ;}
+  .site-header .branding {
+    float: left; }
+    .site-header .branding .logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      height:50px ; }
+
+.main-navigation {
+        float: right; }
+        .main-navigation .menu-toggle, .main-navigation .menu {
+          vertical-align: middle; }
+        .main-navigation .menu-toggle {
+          background: none;
+          border: 2px solid transparent;
+          color: blue;
+          padding: 20px;
+          border-radius: 40px;
+          -webkit-transition: .3s ease;
+                  transition: .3s ease;
+          display: none;
+          outline: none; }
+          @media screen and (max-width: 990px) {
+            .main-navigation .menu-toggle {
+              display: inline-block; } }
+          .main-navigation .menu-toggle:hover, .main-navigation .menu-toggle:active {
+            border-color: #009ad8;
+            color: #009ad8; }
+        .main-navigation .menu {
+          list-style: none;
+          display: inline-block;
+          margin: 0;
+          *zoom: 1; }
+          .main-navigation .menu:after {
+            content: " ";
+            clear: both;
+            display: block;
+            overflow: hidden;
+            height: 0; }
+          @media screen and (max-width: 990px) {
+            .main-navigation .menu {
+              display: none; } }
+          .main-navigation .menu .menu-item {
+            float: left;
+            margin-left: 10px; }
+            .main-navigation .menu .menu-item a {
+              padding: 5px 25px;
+              border: 2px solid transparent;
+              border-radius: 30px;
+              color: black;
+              -webkit-transition: .3s ease;
+                      transition: .3s ease;
+              font-weight: 400; }
+            .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
+              border-color: #009ad8;
+              color: #009ad8; }      
+
+.mobile-navigation {
+  padding: 30px 0 0;
+  clear: both;
+  display: none; }
+  @media screen and (min-width: 991px) {
+    .mobile-navigation {
+      display: none !important; } }
+  .mobile-navigation .menu {
+    background: #262936;
+    list-style: none;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden; }
+    .mobile-navigation .menu a {
+      padding: 20px;
+      display: block;
+      color: white; }
+    .mobile-navigation .menu .menu-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+      .mobile-navigation .menu .menu-item:last-child {
+        border-bottom: none; }
+      .mobile-navigation .menu .menu-item.current-menu-item a {
+        color: #009ad8; }
 
 /* Tautan */
-/* a {
+ a {
     color: #4154f1;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+/*
 
 li:hover {
     color: white;
@@ -77,9 +243,7 @@ li:hover {
     cursor: pointer;
 } */
 
-
-
-/* Navbar responsif */
+/* Navbar responsif
 @media (max-width: 768px) {
     .navbar ul {
         display: none;
@@ -96,10 +260,10 @@ li:hover {
     .navbar ul.active {
         display: flex;
     }
-}
+} */
 
 /* Sudah Responsif tetapi icon hamburger tidak muncul, yg di perbaiki adalah code dari navbar saja  */
-.image_banner {
+/* .image_banner {
     background-image: url('../img/contoh-banner.jpg');
     background-size: cover;
     min-height: 400px;
@@ -107,12 +271,13 @@ li:hover {
     justify-content: center;
     display: flex;
     align-items: center;
-}
+} */
 
 .search-container {
     display: flex;
     gap: 0;
-
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .search-input {
@@ -121,8 +286,8 @@ li:hover {
     background-color: #1E202C;
     /* border: 1px solid #ccc; */
     border-radius: 30px 0 0 30px;
-    width: 400px;
-    height: 20px;
+    width: 100%;
+    height: 44px;
 }
 
 .search-input::placeholder {
