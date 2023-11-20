@@ -26,35 +26,46 @@ class DashboardPostController extends Controller
     public function create()
 {
 
-    return view('admin.posts.create');
+    $countries = $this->getCountries();
+    return view('admin.posts.create', compact('countries'));
 }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    $validatedData = $request->validate([
-        'title' => 'required|max:255',
-        'slug' => 'required|unique:posts',
-        'image' => 'image|file|max:5000',
-        'body' => 'required'
-    ]);
+    {
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'slug' => 'required|unique:posts',
+            'image' => 'image|file|max:5000',
+            'body' => 'required',
+            'selected_country' => 'required', // Tambahkan validasi untuk pemilihan dari data JSON
+        ]);
 
-    if ($request->file('image')) {
-        $validatedData['image'] = $request->file('image')->store('post-images');
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+        // Ambil data negara dari JSON
+        $countries = $this->getCountries();
+        
+        // Ambil data negara yang dipilih dari formulir
+        $selectedCountryCode = $request->input('selected_country');
+        
+        // Setel nilai 'country_code' berdasarkan pilihan dari formulir
+        $validatedData['country_code'] = $selectedCountryCode;
+
+        // Atur nilai 'category_id' ke null jika tidak ada yang dipilih
+        $validatedData['category_id'] = $request->input('category_id', null);
+
+        $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['author'] = 'Admin';
+
+        $post = Post::create($validatedData);
+
+        return redirect('/dashboard/posts')->with('success', 'New news has been added!');
     }
-
-    // Atur nilai 'category_id' ke null jika tidak ada yang dipilih
-    $validatedData['category_id'] = $request->input('category_id', null);
-
-    $validatedData['user_id'] = auth()->user()->id;
-    $validatedData['author'] = 'Admin';
-
-    $post = Post::create($validatedData);
-
-    return redirect('/dashboard/posts')->with('success', 'New news has been added!');
-}
 
     /**
      * Display the specified resource.
@@ -129,5 +140,10 @@ class DashboardPostController extends Controller
     {
         $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
+    }
+    private function getCountries()
+    {
+        $path = public_path('json/countries.json');
+        return json_decode(file_get_contents($path), true);
     }
 }

@@ -80,6 +80,14 @@
                                     </div>
                                 @enderror
                             </div>
+                            <label for="selected_country">Select Country:</label>
+                            <select name="selected_country" id="selected_country" required>
+                                @foreach ($countries as $country)
+                                    <option value="{{ $country['name'] }}">{{ $country['name'] }}</option>
+                                @endforeach
+                            </select>
+
+
                             <div class="mb-3">
                                 <label for="body" class="form-label">News Content</label>
                                 @error('body')

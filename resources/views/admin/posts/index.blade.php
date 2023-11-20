@@ -64,6 +64,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Title</th>
+                                            <th>Country</th>
                                             <th>Time</th>
                                             <th>Action</th>
                                         </tr>
@@ -73,6 +74,7 @@
                                             <tr>
                                                 <td>{{ $post->author }}</td>
                                                 <td>{{ $post->title }}</td>
+                                                <td>{{ $post->selected_country }}
                                                 <td>
                                                     @if ($post->created_at)
                                                         <time

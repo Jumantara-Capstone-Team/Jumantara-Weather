@@ -12,7 +12,7 @@ class Post extends Model
     use HasFactory, Sluggable;
 
     // Boleh di isi
-    protected $fillable = ['title', 'user_id', 'image', 'author', 'body'];
+    protected $fillable = ['title', 'user_id', 'image', 'author', 'body', 'selected_country'];
 
     // gaboleh di isi
     protected $guarded = ['id'];
