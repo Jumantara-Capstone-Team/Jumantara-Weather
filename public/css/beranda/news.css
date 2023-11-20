@@ -1,39 +1,50 @@
 .live-camera {
-    margin-bottom: 30px; 
-    background-color: grey;
-    border-radius: 10px;}
-    .live-camera .live-camera-cover {
-      position: relative;
-      cursor: pointer; }
-      .live-camera .live-camera-cover:after {
-        content: " ";
-        width: 45px;
-        height: 45px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;; }
-      .live-camera .live-camera-cover img {
-        display: block;
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        border-radius: 5px; }
-    .live-camera .location {
-      margin-bottom: 5px;
-      color: black;
-      font-weight: 300;}
-    .live-camera .news-content-card {
-        padding: 1em;
-        padding-top: 0;
-    }
- 
- /*.news {
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan dengan warna hitam yang agak transparan */
+}
+
+.live-camera .live-camera-cover {
+    position: relative;
+    cursor: pointer;
+}
+.live-camera .live-camera-cover:after {
+    content: " ";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.live-camera .live-camera-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+.live-camera .location {
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 300;
+}
+.live-camera .news-content-card {
+    padding: 1em;
+    padding-top: 0;
+}
+
+.live-camera small {
+    color: black;
+}
+
+/*.news {
      margin: 0 !important;  */
-     /* padding: 0 !important; */
-     /* margin-right: auto;
+/* padding: 0 !important; */
+/* margin-right: auto;
      margin-left: auto;
      padding-left: 40px;
      padding-right: 40px;
@@ -102,5 +113,3 @@
     height: auto;
     object-fit: cover;
 } */
-
- 
