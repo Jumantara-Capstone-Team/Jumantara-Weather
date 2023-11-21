@@ -132,8 +132,8 @@
 			<div class="forecast-table">
             <div class="container">
 					<form action="#" class="find-location">
-						<input type="text" placeholder="Find your location...">
-						<input type="submit" value="Find">
+						<input type="text" placeholder="Cari Lokasi">
+						<input type="submit" value="Cari">
 					</form>
 				</div>
 				<div class="container">
