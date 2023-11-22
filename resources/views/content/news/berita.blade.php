@@ -16,12 +16,16 @@
 
 @include('components.navbar.navbar')
 
-<body class="mt-32">
+<body class="bg-gray-200 mt-32 font-sans">
 
     <h1 class="text-black ml-3 mb-2">Berita Terbaru Jumantara</h1>
+    <p class=" text-gray-600 ml-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
+        odio
+        nemo quibusdam cum
+        dolorem corporis quae pariatur.</p>
     <div class="flex flex-col items-center mb-8">
         <!-- Modern Search Bar -->
-        <div class="w-96 bg-white shadow-md rounded-full mb-4">
+        <div class="w-96 bg-white shadow-md rounded-full mb-4 mt-4">
             <div class="flex items-center">
                 <input type="text" placeholder="Search..."
                     class="w-full text-black px-4 py-2 focus:outline-none rounded-l-full">
@@ -41,9 +45,11 @@
                     <div class="card-body">
                         <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
                         <p>{{ $post->body }}</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
+                        <a href="/posts/{{ $post->slug }}">
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Baca Selengkapnya</button>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -55,9 +61,12 @@
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Baca Selengkapnya</button>
-                    </div>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>

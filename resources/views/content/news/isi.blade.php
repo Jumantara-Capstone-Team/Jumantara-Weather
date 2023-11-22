@@ -18,7 +18,7 @@
     <div class="ml-28 mt-24">
         <a href="/berita">
             <button
-                class="text-white px-4 py-2 rounded-xl text-lg bg-blue-600 hover:bg-black transition ease-in-out duration-300">
+                class="text-white px-4 py-2 rounded-xl text-lg bg-blue-500 hover:bg-blue-800 transition ease-in-out duration-300">
                 <i class="fas fa-arrow-left mr-2"></i> Kembali Ke Profile
             </button>
         </a>
