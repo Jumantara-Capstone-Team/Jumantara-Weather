@@ -64,39 +64,71 @@
     </div>
 
 
-    <div class="flex space-x-4 justify-center mb-10">
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Baca Selengkapnya</button>
+    <div class="flex flex-wrap justify-center mb-10 -mx-4">
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
 
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Baca Selengkapnya</button>
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
 
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Baca Selengkapnya</button>
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
