@@ -18,13 +18,12 @@
 
 <body class="bg-gray-200 mt-32 font-sans">
 
-    <h1 class="text-black ml-3 mb-2">Berita Terbaru Jumantara</h1>
+    <h1 class="text-gray-800 ml-3 mb-2">Berita Terbaru Jumantara</h1>
     <p class=" text-gray-600 ml-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
         odio
         nemo quibusdam cum
         dolorem corporis quae pariatur.</p>
     <div class="flex flex-col items-center mb-8">
-        <!-- Modern Search Bar -->
         <div class="w-96 bg-white shadow-md rounded-full mb-4 mt-4">
             <div class="flex items-center">
                 <input type="text" placeholder="Search..."
