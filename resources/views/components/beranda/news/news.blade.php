@@ -37,42 +37,42 @@
                 excepturi autem et quam corrupti culpa non fugiat aliquam facilis!</p>
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <div class="live-camera">
-                        <figure class="live-camera-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
+                    <div class="news-card">
+                        <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
                         </figure>
                         <div class="news-content-card">
-                            <h3 class="location">Berita Satu</h3>
-                            <small class="date">8 oct, 8:00AM</small>
+                            <h3 class="news-title">Berita Satu</h3>
+                            <small class="news-description">Lorem ipsum dolor, sit amet consectur...</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="live-camera">
-                        <figure class="live-camera-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
+                    <div class="news-card">
+                        <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
                         </figure>
                         <div class="news-content-card">
-                            <h3 class="location">Berita Satu</h3>
-                            <small class="date">8 oct, 8:00AM</small>
+                            <h3 class="news-title">Berita Satu</h3>
+                            <small class="news-description">Lorem ipsum dolor, sit amet consectur...</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="live-camera">
-                        <figure class="live-camera-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
+                    <div class="news-card">
+                        <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
                         </figure>
                         <div class="news-content-card">
-                            <h3 class="location">Berita Satu</h3>
-                            <small class="date">8 oct, 8:00AM</small>
+                            <h3 class="news-title">Berita Satu</h3>
+                            <small class="news-description">Lorem ipsum dolor, sit amet consectur...</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="live-camera">
-                        <figure class="live-camera-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
+                    <div class="news-card">
+                        <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
                         </figure>
                         <div class="news-content-card">
-                            <h3 class="location">Berita Satu</h3>
-                            <small class="date">8 oct, 8:00AM</small>
+                            <h3 class="news-title">Berita Satu</h3>
+                            <small class="news-description">Lorem ipsum dolor, sit amet consectur...</small>
                         </div>
                     </div>
                 </div>

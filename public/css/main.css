@@ -143,6 +143,8 @@ form input[type="reset"] {
 .hero {
     display: flex;
     align-items: center;
+    margin: 0 0 50px 0;
+    height: 720px;
 }
 
 .hero-content {
@@ -162,7 +164,11 @@ form input[type="reset"] {
 
 .hero-image {
     margin-left: 20px;
-    max-width: 900px;
+    
+}
+
+.hero-image img {
+    max-width: 600px;
     height: auto;
 }
 

@@ -1,15 +1,15 @@
-.live-camera {
+.news-card {
     margin-bottom: 30px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan dengan warna hitam yang agak transparan */
 }
 
-.live-camera .live-camera-cover {
+.news-card .news-card-cover {
     position: relative;
     cursor: pointer;
 }
-.live-camera .live-camera-cover:after {
+.news-card .news-card-cover:after {
     content: " ";
     width: 45px;
     height: 45px;
@@ -20,24 +20,24 @@
     bottom: 0;
     margin: auto;
 }
-.live-camera .live-camera-cover img {
+.news-card .news-card-cover img {
     display: block;
     width: 100%;
     height: auto;
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
-.live-camera .location {
+.news-card .news-content-card .news-title {
     margin-bottom: 5px;
     color: black;
     font-weight: 300;
 }
-.live-camera .news-content-card {
+.news-card .news-content-card {
     padding: 1em;
     padding-top: 0;
 }
 
-.live-camera small {
+.news-card .news-content-card .news-description {
     color: black;
 }
 
@@ -49,6 +49,8 @@
 .news p {
     color: black;
 }
+
+
 
 /* .news {
     margin: 0 !important;

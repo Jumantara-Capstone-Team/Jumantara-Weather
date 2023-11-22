@@ -1,5 +1,5 @@
 .sepuh {
-    margin-top: 150px;
+    margin-top: 60px;
 }
 
 .find-location {
@@ -28,7 +28,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
-    margin-top: 12px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 .forecast-container .forecast {
@@ -131,6 +131,24 @@ form select {
     border: none;
     padding: 10px;
     border-radius: 30px;
+}
+
+.suhu-card {
+    margin-bottom: 30px;
+    background-color:#1e202b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.suhu-card .suhu-card-content {
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.suhu-card .suhu-card-content h2 {
+    font-weight: 400;
+    font-size: 50px;
 }
 
 /* .img {
