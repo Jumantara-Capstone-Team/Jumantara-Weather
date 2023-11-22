@@ -43,8 +43,8 @@
                 <div class="card bg-base-100 shadow-xl">
                     <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
-                        <p>{{ $post->body }}</p>
+                        <h2 class="card-title text-2xl">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
+                        <p class="text-base text-gray-600">{{ strip_tags($post->body) }}</p>
                         <a href="/posts/{{ $post->slug }}">
                             <div class="card-actions justify-end">
                                 <button class="btn btn-primary">Baca Selengkapnya</button>
@@ -60,7 +60,7 @@
                 <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
                     <a href="/posts/{{ $post->slug }}">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
@@ -76,10 +76,13 @@
                 <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Baca Selengkapnya</button>
-                    </div>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -89,10 +92,13 @@
                 <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Baca Selengkapnya</button>
-                    </div>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -102,14 +108,16 @@
                 <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Baca Selengkapnya</button>
-                    </div>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
-        <!-- Repeat the same structure for the next cards -->
 
     </div>
 
