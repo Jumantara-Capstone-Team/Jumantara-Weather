@@ -16,7 +16,7 @@
 
 @include('components.navbar.navbar')
 
-<body class="bg-gray-200 mt-20 font-sans">
+<body class="bg-gray-200 mt-24 font-sans">
 
     <h1 class="text-gray-800 ml-3 mb-2">Berita Terbaru Jumantara</h1>
     <p class=" text-gray-600 ml-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
