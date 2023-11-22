@@ -2,168 +2,123 @@
 <html lang="en">
 <title>News | Jumantara</title>
 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Jumantara</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+</head>
+
 @include('components.head.head')
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
-    #sticky-container {
-        position: relative;
-    }
-
-    #sticky-content {
-        @apply sticky top-8;
-        z-index: 10;
-
-    }
-</style>
 
 @include('components.navbar.navbar')
 
-<!-- ======= Breadcrumbs ======= -->
-<section class="bg-black text-white py-4">
-    <div class="container text-center">
-        <h2 class="text-2xl font-bold">Weather News Jumantara</h2>
-        <p class="text-base mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem amet veniam sit
-            voluptatibus
-            provident quis, enim modi doloremque quae quam.</p>
+<body class="bg-gray-200 mt-24 font-sans">
+
+    <h1 class="text-gray-800 ml-3 mb-2">Berita Terbaru Jumantara</h1>
+    <p class=" text-gray-600 ml-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
+        odio
+        nemo quibusdam cum
+        dolorem corporis quae pariatur.</p>
+    <div class="flex flex-col items-center mb-8">
+        <div class="w-96 bg-white shadow-md rounded-full mb-4 mt-4">
+            <div class="flex items-center">
+                <input type="text" placeholder="Search..."
+                    class="w-full text-black px-4 py-2 focus:outline-none rounded-l-full">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-r-full">Search</button>
+            </div>
+        </div>
     </div>
-</section><!-- End Breadcrumbs -->
 
 
 
-<body class="bg-gray-100 font-sans mt-32">
+    <div class="flex flex-wrap justify-center mb-10 -mx-4">
 
-
-    <div class="container mx-auto p-4 md:p-8 flex flex-col md:flex-row">
-
-        <!-- Kolom Kiri - Detail Berita -->
-        <div class="md:w-2/3 md:pr-8 mb-4 md:mb-0 space-y-6">
-
-            <!-- Berita -->
-            @foreach ($posts->sortByDesc('created_at') as $post)
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <img src="https://placekitten.com/800/400" alt="Gambar Berita"
-                        class="mb-4 w-full h-48 object-cover rounded-md">
-                    <h2 class="text-3xl text-gray-700 font-semibold mb-2">
-                        {{ Str::ucfirst(Str::limit($post->title, 40)) }}
-                    </h2>
-                    <div class="flex items-center mb-2">
-                        <span class="text-gray-400 text-sm">
-                            <i class="fas fa-user pr-2"></i> {{ $post->author }}
-                        </span>
-                        <span class="text-gray-400 text-sm ml-4">
-                            <i class="far fa-calendar-alt pr-2"></i>
-                            @if ($post->created_at)
-                                {{ $post->created_at->format('d F Y') }}
-                            @endif
-                        </span>
-
+        @foreach ($posts->sortByDesc('created_at') as $post)
+            <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
+                        <p class="text-base text-gray-600">{{ strip_tags($post->body) }}</p>
+                        <a href="/posts/{{ $post->slug }}">
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Baca Selengkapnya</button>
+                            </div>
+                        </a>
                     </div>
-                    <p class="text-gray-500">{{ strip_tags($post->body) }}</p>
-                    <a href="/posts/{{ $post->slug }}"
-                        class="text-white block mt-2 p-1 border border-blue-500 rounded-xl bg-blue-700 hover:bg-blue-600 hover:underline w-40 h-8">
-                        <p class="ml-2  text-white">Baca Selengkapnya</p>
+                </div>
+            </div>
+        @endforeach
+
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
                     </a>
 
                 </div>
-            @endforeach
-
-            <div class="flex justify-center items-center my-4 border-t-2 border-b-2 border-gray-300 py-4">
-                <ul class="flex space-x-4">
-                    @if ($posts->previousPageUrl())
-                        <li>
-                            <a href="{{ $posts->previousPageUrl() }}"
-                                class="text-lg text-white border-blue-700 p-2 bg-blue-700 rounded-xl text-blue-500 hover:bg-blue-600 transition-all duration-300 ease-in-out">Previous</a>
-                        </li>
-                    @endif
-
-                    @if ($posts->nextPageUrl())
-                        <li>
-                            <a href="{{ $posts->nextPageUrl() }}"
-                                class="text-lg text-white border-blue-700 p-2 bg-blue-700 rounded-xl text-blue-500 hover:bg-blue-600 transition-all duration-300 ease-in-out">Next</a>
-                        </li>
-                    @endif
-                </ul>
             </div>
-
-            <!-- Tambahkan Berita ke depannya menggunakan database ini hanya cek sticky -->
         </div>
 
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
 
-        <!-- Kolom Kanan - Pencarian dan Daftar Berita -->
-        <div id="sticky-container" class="md:w-1/3 md:pl-8">
-            <!-- Pencarian dan Daftar Berita dalam satu border -->
-            <div id="sticky-content" class="bg-white p-6 rounded-lg shadow-md border border-gray-300">
-                <!-- Pencarian -->
-                <h2 class="text-xl mb-4 text-gray-600">Cari Berita Dan Artikel</h2>
-                <div class="mb-6 flex">
-                    <input type="text" placeholder="Cari berita..."
-                        class="w-full p-2 border border-gray-300 rounded-l-md text-black outline-none">
-
-                    <button class="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600 transition duration-300">
-                        <i class="fas fa-search"></i>
-                    </button>
                 </div>
+            </div>
+        </div>
 
-                <!-- Daftar Berita -->
-                <div>
-                    <h2 class="text-xl mb-4 text-gray-600">Berita Lainnya</h2>
-                    <ul>
-                        <li class="mb-4 bg-white">
-                            <div class="flex items-start">
-                                <img src="https://placekitten.com/200/100" alt="Gambar Berita"
-                                    class="w-16 h-16 object-cover rounded-md">
-                                <div class="ml-4">
-                                    <a href="">
-                                        <p class="text-gray-600">Judul Berita 1</p>
-                                    </a>
-                                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing.</p>
-                                    <a href="#" class="text-blue-500 hover:underline block mt-2">
-                                        Baca Selengkapnya
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-4 bg-white">
-                            <div class="flex items-start">
-                                <img src="https://placekitten.com/200/100" alt="Gambar Berita"
-                                    class="w-16 h-16 object-cover rounded-md">
-                                <div class="ml-4">
-                                    <a href="">
-                                        <p class="text-gray-600">Judul Berita 1</p>
-                                    </a>
-                                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing.</p>
-                                    <a href="#" class="text-blue-500 hover:underline block mt-2">
-                                        Baca Selengkapnya
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
 
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
 
     </div>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            var stickyContent = document.getElementById('sticky-content');
-            var containerRect = document.getElementById('sticky-container').getBoundingClientRect();
-
-            if (containerRect.top <= 8) {
-                stickyContent.classList.add('fixed', 'top-8');
-            } else {
-                stickyContent.classList.remove('fixed', 'top-8');
-            }
-        });
-    </script>
 
 </body>
 
