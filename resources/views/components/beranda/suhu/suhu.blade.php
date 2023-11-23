@@ -4,7 +4,7 @@
             <div class="today suhu">
                 <div class="suhu-header">
                     <div class="day">Senin</div>
-                    <div class="date">30 Oktober</div>
+                    <div class="date">11 Oktober</div>
                 </div>
                 <div class="suhu-content">
                     <div class="location">Jakarta, Indonesia</div>
@@ -119,43 +119,54 @@
             </div>
 
 
-            <!-- <div class="monday">
+            <div class="monday">
                 <h2>Informasi Suhu Cuaca Terkini</h2>
                 <h3>Jakarta, Indonesia</h3>
                 <h1><i class="fas fa-sun"></i> <span id="temperature">Loading...</span></h1>
                 <p>Kelembaban: <span id="humidity">Loading...</span></p>
                 <p>Perkiraan cuaca: <span id="weather">Loading...</span></p>
-            </div> -->
+            </div>
 
-            <script>
-                // Fungsi untuk mengambil data cuaca dari sumber eksternal (misalnya, API cuaca)
-                function getWeatherData() {
-                    // fetch('URL_API_CUACA')
-                    //     .then(response => response.json())
-                    //     .then(data => {
-                    //         updateWeatherInfo(data);
-                    //     });
+                <!-- Tambahkan script ini setelah elemen HTML di atas -->
+                <script>
+                    function getWeatherData() {
+                        fetch('http://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=4a5840a84371e968da5eb7ffc24115e7')
+                            .then(response => response.json())
+                            .then(data => {
+                                updateWeatherInfo(data);
+                            })
+                            .catch(error => console.error('Error:', error));
+                    }
 
-                    // Sebagai contoh
-                    const fakeWeatherData = {
-                        temperature: "25°C",
-                        humidity: "60%",
-                        weather: "Cerah"
-                    };
+                    function updateWeatherInfo(data) {
+                        // Update informasi cuaca untuk hari ini
+                        document.getElementById("temperature").textContent = `${data.main.temp}°C`;
+                        document.getElementById("humidity").textContent = `${data.main.humidity}%`;
+                        document.getElementById("weather").textContent = data.weather[0].description;
 
-                    updateWeatherInfo(fakeWeatherData);
-                }
+                        // Update informasi cuaca untuk hari Senin
+                        document.querySelector(".today .num").textContent = Math.round(data.main.temp);
+                        document.querySelector(".today .suhu-icon img").src = getWeatherIcon(data.weather[0].icon);
+                        document.getElementById("humidity").textContent = `${data.main.humidity}%`;
+                        document.getElementById("weather").textContent = data.weather[0].description;
 
-                // Fungsi untuk memperbarui informasi cuaca di dalam HTML
-                function updateWeatherInfo(data) {
-                    document.getElementById("temperature").textContent = data.temperature;
-                    document.getElementById("humidity").textContent = data.humidity;
-                    document.getElementById("weather").textContent = data.weather;
-                }
+                        // Update informasi cuaca untuk hari-hari berikutnya
+                        const days = ["Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
+                        for (let i = 0; i < days.length; i++) {
+                            const dayElement = document.querySelector(`.${days[i]} .degree`);
+                            dayElement.textContent = `${Math.round(data.main.temp)}°C`;
+                            document.querySelector(`.${days[i]} .suhu-icon img`).src = getWeatherIcon(data.weather[0].icon);
+                        }
+                    }
 
-                // Panggil fungsi getWeatherData saat halaman dimuat
-                getWeatherData();
-            </script>
+                    // Mendapatkan ikon cuaca berdasarkan kode ikon dari OpenWeatherMap
+                    function getWeatherIcon(iconCode) {
+                        return `http://openweathermap.org/img/w/${iconCode}.png`;
+                    }
+
+                    getWeatherData();
+                </script>
+
         </div>
     </div>
 </section>
