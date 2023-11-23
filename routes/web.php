@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+
 // Admin Details Route
 Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
 Route::get('/activity', [AuthController::class, 'activity'])->name('activity');

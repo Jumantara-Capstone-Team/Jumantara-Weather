@@ -1,13 +1,163 @@
-.img {
+.sepuh {
+    margin-top: 60px;
+}
+
+.find-location {
+    position: relative;
+    margin-bottom: 0;
+}
+.find-location input[type="text"] {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+    background: #1e202b;
+    color: white;
+}
+.find-location input[type="submit"] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 40px;
+}
+
+.forecast-container {
+    width: 100%;
+    background: #323544;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.forecast-container .forecast {
+    display: table-cell;
+    vertical-align: top;
+}
+.forecast-container .forecast:nth-child(even) {
+    background-color: #262936;
+}
+@media screen and (max-width: 990px) {
+    .forecast-container .forecast {
+        display: block;
+        width: 16.6667%;
+        float: left;
+    }
+}
+.forecast-container .forecast.today {
+    width: 420px;
+}
+.forecast-container .forecast.today .forecast-header {
+    zoom: 1;
+}
+.forecast-container .forecast.today .forecast-header:after {
+    content: " ";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    height: 0;
+}
+.forecast-container .forecast.today .forecast-header .day {
+    float: left;
+}
+.forecast-container .forecast.today .forecast-header .date {
+    float: right;
+}
+.forecast-container .forecast.today .forecast-content {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.forecast-container .forecast.today .location {
+    font-size: 18px;
+    font-size: 1.2857142857em;
+    font-weight: 400;
+}
+.forecast-container .forecast.today .degree .num,
+.forecast-container .forecast.today .degree .forecast-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.forecast-container .forecast.today .degree .num {
+    font-size: 90px;
+    font-size: 6.4285714286rem;
+    margin-right: 30px;
+}
+.forecast-container .forecast.today span {
+    margin-right: 20px;
+}
+.forecast-container .forecast.today span img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+@media screen and (max-width: 990px) {
+    .forecast-container .forecast.today {
+        display: block;
+        width: 100%;
+    }
+}
+.forecast-container .forecast .forecast-header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+}
+.forecast-container .forecast .forecast-icon {
+    height: 50px;
+}
+.forecast-container .forecast .forecast-content {
+    padding: 50px 20px 10px;
+    text-align: center;
+}
+.forecast-container .forecast .forecast-content .forecast-icon {
+    margin-bottom: 20px;
+}
+.forecast-container .forecast .forecast-content .degree {
+    font-size: 24px;
+    font-size: 1.7142857143em;
+    color: white;
+    font-weight: 700;
+}
+.forecast-container .forecast .forecast-content small {
+    font-size: 16px;
+    font-size: 1.1428571429em;
+}
+
+form input,
+form textarea,
+form select {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.suhu-card {
+    margin-bottom: 30px;
+    background-color:#1e202b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.suhu-card .suhu-card-content {
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.suhu-card .suhu-card-content h2 {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+/* .img {
     border: 0;
 }
 
-.container {
-   margin-right: auto;
-   margin-left: auto;
-   padding-left: 40px;
-   padding-right: 40px; 
-}
+
+
+
 
 .suhu-container {
     background: #323544;
@@ -16,7 +166,6 @@
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
-    margin-top: -150px;
     margin-bottom: 50px;
 }
 
@@ -31,10 +180,6 @@
     text-align: center;
     background: rgba(0, 0, 0, 0.1);
     height: 20px;
-}
-
-.suhu-container .today.suhu {
-    
 }
 
 .suhu-container .suhu.today .suhu-header .day {
@@ -93,10 +238,7 @@
     display: table-cell;
     vertical-align: top;
 }
-
-
-
-
+ */
 
 /* .card {
     border: 1px solid #ccc;
@@ -112,7 +254,7 @@
     background-color: #fff;
 } */
 
-.card h2 {
+/* .card h2 {
     text-align: left;
 }
 
@@ -131,4 +273,4 @@
 
 .day p + p {
     margin-left: 20px;
-}
+} */

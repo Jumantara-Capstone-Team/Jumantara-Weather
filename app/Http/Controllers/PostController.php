@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index($category = null)
     {
-        $posts = Post::orderBy('created_at', 'desc')->paginate(8);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(5);
 
         return view('content.news.berita', [
             "title" => "Berita",

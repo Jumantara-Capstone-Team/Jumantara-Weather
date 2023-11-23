@@ -31,6 +31,7 @@
     <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    
 
     {{-- Style Css yang di letakan di dalam folder public yang sudah saya siapakan --}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -38,4 +39,5 @@
     <link href="{{ asset('css/beranda/suhu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/beranda/news.css') }}" rel="stylesheet">
     <link href="{{ asset('css/beranda/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/beranda/navbar.css') }}" rel="stylesheet">
 </head>

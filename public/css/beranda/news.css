@@ -1,11 +1,64 @@
-.news {
-     /* margin: 0 !important;  */
-     /* padding: 0 !important; */
-     margin-right: auto;
-     margin-left: auto;
-     padding-left: 40px;
-     padding-right: 40px;
+.news-card {
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan dengan warna hitam yang agak transparan */
+}
 
+.news-card .news-card-cover {
+    position: relative;
+    cursor: pointer;
+}
+.news-card .news-card-cover:after {
+    content: " ";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.news-card .news-card-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.news-card .news-content-card .news-title {
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 300;
+}
+.news-card .news-content-card {
+    padding: 1em;
+    padding-top: 0;
+}
+
+.news-card .news-content-card .news-description {
+    color: black;
+}
+
+.news h2 {
+    color: black;
+    font-weight: bold;
+}
+
+.news p {
+    color: black;
+}
+
+
+
+/* .news {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .section-news {
     padding-bottom: 1px !important;
@@ -18,7 +71,6 @@
 .section-news p {
     text-align: left;
     padding-left: 2px !important;
-    margin-left: 10%;
     font-size: 24px;
     line-height: 42px;
     font-weight: 600;
@@ -43,7 +95,6 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-   
 }
 
 .news-card {
@@ -53,8 +104,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 0px;
     width: 100%;
-    /* height: 200px; */
-   
+    height: 200px;
 }
 
 .news-title {
@@ -71,4 +121,4 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */

@@ -35,6 +35,8 @@
                                         onclick="closeNotification(this)">&times;</button>
                                     <h2 class="text-gray-800 font-bold text-xl">{{ $notification->title }}</h2>
                                     <p class="text-gray-600 text-sm">{{ strip_tags($notification->body) }}</p>
+                                    <p class="text-gray-800 text-sm">{{ $notification->selected_country }}
+                                    </p>
                                     <p class="text-gray-600 text-sm">
                                         {{ \Carbon\Carbon::parse($notification->updated_at)->format('Y-m-d') }}
                                     </p>
