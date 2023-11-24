@@ -36,16 +36,18 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque temporibus
                 excepturi autem et quam corrupti culpa non fugiat aliquam facilis!</p>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="news-card">
-                        <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
-                        </figure>
-                        <div class="news-content-card">
-                            <h3 class="news-title">Berita Satu</h3>
-                            <small class="news-description">Lorem ipsum dolor, sit amet consectur...</small>
+                @foreach ($posts->sortByDesc('created_at')->take(4) as $post)
+                    <div class="col-md-3 col-sm-6">
+                        <div class="news-card">
+                            <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
+                            </figure>
+                            <div class="news-content-card">
+                                <h3 class="news-title">{{ Str::limit($post->title, 50) }}</h3>
+                                <small class="news-description">{{ strip_tags($post->body) }}</small>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
                 <div class="col-md-3 col-sm-6">
                     <div class="news-card">
                         <figure class="news-card-cover"><img src="{{ asset('img/contoh.jpeg') }}" alt="">
