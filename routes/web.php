@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
+    BerandaController,
     AuthController,
     PostController,
     DashboardPostController,
@@ -20,9 +21,9 @@ use App\Http\Controllers\{
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+// Route Beranda/Main
+
+Route::get('/', [BerandaController::class, 'index']);
 
 // Route News
 Route::get('/berita', [PostController::class, 'index'])->name('berita.index');
