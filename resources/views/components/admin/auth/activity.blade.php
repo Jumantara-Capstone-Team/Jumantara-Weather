@@ -23,7 +23,7 @@
                             </button>
                         </a>
                     </div>
-                    <h1 class="text-black font-bold text-3xl ml-4">Notification Jumantara Apps</h1>
+                    <h1 class="text-black font-bold text-3xl ml-4">Notification Jumantara</h1>
                     <p class="text-black ml-4">Fitur Notifikasi data yang di tambahkan ke dalam jumantara weather apps
                     </p>
                     <div class="max-w-screen-lg mx-auto my-8 ml-4">
