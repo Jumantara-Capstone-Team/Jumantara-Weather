@@ -6,6 +6,7 @@ use App\Http\Controllers\{
     BerandaController,
     AuthController,
     PostController,
+    QualityController,
     DashboardPostController,
     DashboardQualityController,
     SearchController
@@ -37,6 +38,10 @@ Route::fallback(function () {
 });
 
 Route::get('/search', [SearchController::class, 'index']);
+
+// Route Air Quality
+Route::get('/quality', [QualityController::class, 'index']);
+
 
 // Login Route
 Route::get('login', fn() => view('login.login', ["title" => "Login"]))->name('login');
