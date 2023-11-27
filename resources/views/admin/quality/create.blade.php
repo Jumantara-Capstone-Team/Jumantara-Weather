@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Edit News {{ $post->title }} | Jumantara</title>
+    <title>Create Data Air Quality | Jumantara</title>
 
     <link href="{{ asset('/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/img/icon.png') }}" rel="apple-touch-icon">
@@ -21,7 +21,6 @@
         300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
-
 
     <link href="{{ asset('css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
 
@@ -46,17 +45,14 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Edit News</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Create Air Quality</h1>
                     <div class="col-lg-8">
-                        <form method="post" action="/dashboard/posts/{{ $post->slug }}" class="mb-5"
-                            enctype="multipart/form-data">
-                            @method('put')
+                        <form method="post" action="/dashboard/air" class="mb-5" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    id="title" name="title" required autofocus
-                                    value="{{ old('title', $post->title) }}">
+                                    id="title" name="title" required autofocus value="{{ old('title') }}">
                                 @error('title')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -66,25 +62,16 @@
                             <div class="mb-3">
                                 <label for="slug" class="form-label">URL</label>
                                 <input type="text" class="form-control @error('slug') is-invalid @enderror"
-                                    id="slug" name="slug" required value="{{ old('slug', $post->slug) }}">
+                                    id="slug" name="slug" required value="{{ old('slug') }}">
                                 @error('slug')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                 @enderror
                             </div>
-
                             <div class="mb-3">
-                                <label for="image" class="form-label">News Image</label>
-                                <input type="hidden" name="oldImage" value="{{ $post->image }}">
-                                @if ($post->image)
-                                    <img src="{{ asset('storage/' . $post->image) }}"
-                                        class="img-preview img-fluid mb-3 col-sm-6 d-block">
-                                @else
-                                    <img class="img-preview img-fluid mb-3 col-sm-6 d-block">
-                                @endif
-
-
+                                <label for="image" class="form-label">Air Quality Image</label>
+                                <img class="img-preview img-fluid mb-3 col-sm-6">
                                 <input class="form-control @error('image') is-invalid @enderror" type="file"
                                     id="image" name="image" onchange="previewImage()">
                                 @error('image')
@@ -93,18 +80,23 @@
                                     </div>
                                 @enderror
                             </div>
+                            <label for="selected_country">Select Country:</label>
+                            <select name="selected_country" id="selected_country" required>
+                                @foreach ($countries as $country)
+                                    <option value="{{ $country['name'] }}">{{ $country['name'] }}</option>
+                                @endforeach
+                            </select>
 
 
                             <div class="mb-3">
-                                <label for="body" class="form-label">News Content</label>
+                                <label for="body" class="form-label">Air Quality Content</label>
                                 @error('body')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
-                                <input id="body" type="hidden" name="body"
-                                    value="{{ old('body', $post->body) }}">
+                                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
                                 <trix-editor input="body"></trix-editor>
                             </div>
-                            <button type="submit" class="btn btn-primary">Update News</button>
+                            <button type="submit" class="btn btn-primary">Create Air Quality</button>
                         </form>
                     </div>
                 </div>
@@ -159,7 +151,7 @@
         const slug = document.querySelector('#slug');
 
         title.addEventListener('change', function() {
-            fetch('/dashboard/posts/checkSlug?title=' + title.value)
+            fetch('/dashboard/air/checkSlug?title=' + title.value)
                 .then(response => response.json())
                 .then(data => slug.value = data.slug)
         });
@@ -178,7 +170,6 @@
             }
         }
     </script>
-
     @include('components/admin/all/all')
 
 </body>

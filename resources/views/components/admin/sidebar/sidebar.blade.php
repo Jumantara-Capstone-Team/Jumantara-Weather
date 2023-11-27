@@ -33,6 +33,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Add News</h6>
                 <a class="collapse-item" href="/dashboard/posts">Add Berita</a>
+                <h6 class="collapse-header">Add News</h6>
+                <a class="collapse-item" href="/dashboard/quality">Add Air Quality</a>
             </div>
         </div>
     </li>

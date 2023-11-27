@@ -60,7 +60,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
                     <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
-                    <a href="/posts/{{ $post->slug }}">
+                    <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
                         </div>
@@ -76,7 +76,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
                     <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
-                    <a href="/posts/{{ $post->slug }}">
+                    <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
                         </div>
@@ -92,7 +92,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
                     <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
-                    <a href="/posts/{{ $post->slug }}">
+                    <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
                         </div>
@@ -108,7 +108,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Shoes!</h2>
                     <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
-                    <a href="/posts/{{ $post->slug }}">
+                    <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
                         </div>
