@@ -11,6 +11,9 @@ class Quality extends Model
 {
     use HasFactory, Sluggable;
 
+
+    protected $table = 'qualities';
+
     // Boleh di isi
     protected $fillable = ['title', 'user_id', 'image', 'author', 'body', 'selected_country'];
 
