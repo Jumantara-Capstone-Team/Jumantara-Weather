@@ -7,6 +7,7 @@ use App\Http\Controllers\{
     AuthController,
     PostController,
     DashboardPostController,
+    DashboardQualityController,
     SearchController
 };
 
@@ -59,5 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
         Route::resource('posts', DashboardPostController::class);
+        Route::get('quality/checkSlug', [DashboardQualityController::class, 'checkSlug']);
+        Route::resource('quality', DashboardQualityController::class);
     });
 });
