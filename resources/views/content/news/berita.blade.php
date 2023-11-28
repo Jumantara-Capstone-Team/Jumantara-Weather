@@ -40,7 +40,7 @@
         @foreach ($posts->sortByDesc('created_at') as $post)
             <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                    <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-2xl">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
                         <p class="text-base text-gray-600">{{ strip_tags($post->body) }}</p>
@@ -56,10 +56,12 @@
 
         <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
             <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
+                    </h2>
+                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis, hic.</p>
                     <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
@@ -72,10 +74,12 @@
 
         <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
             <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
+                    </h2>
+                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis, hic.</p>
                     <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
@@ -88,10 +92,12 @@
 
         <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
             <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
+                    </h2>
+                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis, hic.</p>
                     <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
@@ -104,10 +110,12 @@
 
         <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
             <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
                 <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p class="text-base text-gray-600">If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
+                    </h2>
+                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis, hic.</p>
                     <a href="">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>
