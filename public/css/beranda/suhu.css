@@ -140,6 +140,24 @@ form select {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.suhu-card .suhu-card-header {
+    background:  #323544;;
+    padding: 10px;
+    font-weight: 400;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.suhu-card .suhu-card-header .suhu-card-content-title {
+    font-weight: 200;
+    text-align: center;
+    align-items: center;
+}
+
+.suhu-card .suhu-card-header h4 {
+    font-size: 20px;
+}
+
 .suhu-card .suhu-card-content {
     align-items: center;
     padding: 1em;

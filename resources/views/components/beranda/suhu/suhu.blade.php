@@ -87,7 +87,7 @@
                         </div>
                         <div class="forecast">
                             <div class="forecast-header">
-                                <div class="day">Sunday</div>
+                                <div class="day">Minggu</div>
                             </div> <!-- .forecast-header -->
                             <div class="forecast-content">
                                 <div class="forecast-icon">
@@ -99,21 +99,25 @@
                         </div>
                     </div>
 
-                    <div class="container">
+
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <div class="suhu-card">
-                                    <div class="suhu-card-content">
-                                        <h4 class="suhu-card-content-title">Air Quality</h4>
-                                        <h2 class="suhu-card-content-isi">70%</h2>
+                                        <div class="suhu-card-header">
+                                            <h4 class="suhu-card-content-title">Air Quality</h4>
+                                        </div>
+                                        <div class="suhu-card-content">
+                                        <h2 class="suhu-card-content-isi">70</h2>
                                         <p class="suhu-card-content-description">Good</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
                                 <div class="suhu-card">
-                                    <div class="suhu-card-content">
+                                    <div class="suhu-card-header">
                                         <h4 class="suhu-card-content-title">Wind Status</h4>
+                                    </div>
+                                    <div class="suhu-card-content">
                                         <h2 class="suhu-card-content-isi">18km/h</h2>
                                         <p class="suhu-card-content-description">Good</p>
                                     </div>
@@ -121,8 +125,10 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                                 <div class="suhu-card">
-                                    <div class="suhu-card-content">
+                                    <div class="suhu-card-header">
                                         <h4 class="suhu-card-content-title">Humidity</h4>
+                                    </div>
+                                    <div class="suhu-card-content">
                                         <h2 class="suhu-card-content-isi">12%</h2>
                                         <p class="suhu-card-content-description">Normal</p>
                                     </div>
@@ -130,15 +136,17 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                                 <div class="suhu-card">
-                                    <div class="suhu-card-content">
+                                    <div class="suhu-card-header">
                                         <h4 class="suhu-card-content-title">Visibility</h4>
+                                    </div>
+                                    <div class="suhu-card-content">
                                         <h2 class="suhu-card-content-isi">5.2km</h2>
-                                        <p class="suhu-card-content-description">Normal</p>
+                                        <p class="suhu-card-content-description">Good</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                     <!-- Tambahkan script ini setelah elemen HTML di atas -->
                     <script>
                         function getWeatherData() {
