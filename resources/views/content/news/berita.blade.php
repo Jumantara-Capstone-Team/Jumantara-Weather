@@ -72,6 +72,9 @@
             </div>
         </div>
 
+
+
+
         <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
             <div class="card bg-base-100 shadow-xl">
                 <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>

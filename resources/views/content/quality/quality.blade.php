@@ -71,7 +71,7 @@
 
             <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
                         <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
@@ -87,7 +87,7 @@
 
             <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
                         <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
@@ -103,7 +103,7 @@
 
             <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
                         <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
@@ -119,7 +119,7 @@
 
             <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/shoes.jpg') }}" alt="Shoes" /></figure>
+                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
                         <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
