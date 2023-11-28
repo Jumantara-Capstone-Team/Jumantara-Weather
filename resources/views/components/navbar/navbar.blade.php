@@ -6,12 +6,12 @@
 
         <div class="main-navigation">
             <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-			<ul class="menu">
+            <ul class="menu">
                 <li class="menu-item"><a href="/">Beranda</a></li>
                 <li class="menu-item"><a href="/Weather">Cuaca</a></li>
                 <li class="menu-item"><a href="/berita">Berita</a></li>
                 <li class="menu-item"><a href="/Radar">Radar</a></li>
-                <li class="menu-item"><a href="/Air-Quality">Air Quality</a></li>
+                <li class="menu-item"><a href="/quality">Air Quality</a></li>
             </ul>
         </div>
 
