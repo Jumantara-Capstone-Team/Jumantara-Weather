@@ -2,21 +2,11 @@
 <html lang="en">
 <title>Air Quality | Jumantara</title>
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Quality | Jumantara</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-
-</head>
-
 @include('components.head.head')
 
 @include('components.navbar.navbar')
 
-<body class="bg-gray-200 mt-24 font-sans">
+<body class="bg-gray-200 font-sans">
     <div class="container mx-auto mt-8 mb-8">
         <section class="bg-white p-8 rounded shadow-md">
             <h2 class="text-2xl text-black font-bold mb-2">Air Quality Monitoring</h2>

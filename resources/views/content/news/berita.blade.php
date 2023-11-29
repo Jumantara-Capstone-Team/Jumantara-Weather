@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>News | Jumantara</title>
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News | Jumantara</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-
-</head>
-
 @include('components.head.head')
 
 @include('components.navbar.navbar')
 
-<body class="bg-gray-200 mt-24 font-sans">
+<body class="bg-gray-50 font-sans dark:bg-gray-800">
 
-    <h1 class="text-gray-800 ml-3 mb-2">Berita Terbaru Jumantara</h1>
+    <h1 class="text-gray-800 ml-3 mt-20 mb-2 text-3xl font-bold">Berita Terbaru Jumantara</h1>
     <p class=" text-gray-600 ml-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
         odio
         nemo quibusdam cum
