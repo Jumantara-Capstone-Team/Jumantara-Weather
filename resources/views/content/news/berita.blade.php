@@ -24,101 +24,77 @@
 
 
 
-    <div class="flex flex-wrap justify-center mb-10 -mx-4">
-
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 20px;">
         @foreach ($posts->sortByDesc('created_at') as $post)
-            <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-2xl">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
-                        <p class="text-base text-gray-600">{{ strip_tags($post->body) }}</p>
-                        <a href="/posts/{{ $post->slug }}">
-                            <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Baca Selengkapnya</button>
-                            </div>
-                        </a>
-                    </div>
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                        alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
+                    <p>{{ strip_tags($post->body) }}</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
                 </div>
             </div>
         @endforeach
 
-        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-            <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
-                    </h2>
-                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Reiciendis, hic.</p>
-                    <a href="">
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    </a>
-
+        {{-- <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
 
 
-
-
-        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-            <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
-                    </h2>
-                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Reiciendis, hic.</p>
-                    <a href="">
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    </a>
-
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
 
-        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-            <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
-                    </h2>
-                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Reiciendis, hic.</p>
-                    <a href="">
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    </a>
 
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
 
-        <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-            <div class="card bg-base-100 shadow-xl">
-                <figure><img src="{{ asset('/img/download.jpeg') }}" alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-2xl">Filipina Dihantam Badai Vongfong di Tengah Pandemi Corona
-                    </h2>
-                    <p class="text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Reiciendis, hic.</p>
-                    <a href="">
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    </a>
 
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
     </div>
+
 
 </body>
 

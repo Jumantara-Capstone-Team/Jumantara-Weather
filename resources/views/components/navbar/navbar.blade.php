@@ -3,7 +3,7 @@
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <a href="#" class="flex items-center">
                 <img src="{{ asset('img/main/logo.png') }}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Tech Code</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Jumantara</span>
             </a>
             <div class="flex items-center lg:order-2">
                 <button data-collapse-toggle="mobile-menu-2" type="button"

@@ -47,7 +47,7 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Create News</h1>
                     <div class="col-lg-8">
-                        <form method="post" action="/dashboard/quality" class="mb-5" enctype="multipart/form-data">
+                        <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
@@ -151,7 +151,7 @@
         const slug = document.querySelector('#slug');
 
         title.addEventListener('change', function() {
-            fetch('/dashboard/quality/checkSlug?title=' + title.value)
+            fetch('/dashboard/posts/checkSlug?title=' + title.value)
                 .then(response => response.json())
                 .then(data => slug.value = data.slug)
         });

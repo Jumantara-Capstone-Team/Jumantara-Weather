@@ -6,13 +6,14 @@
 
 @include('components.navbar.navbar')
 
-<body class="bg-gray-200 font-sans">
+<body class="bg-gray-50 font-sans dark:bg-gray-800">
+    <h1 class="text-gray-800 ml-10 mt-20 mb-2 text-3xl font-bold">Air Quality Monitoring</h1>
+    <p class=" text-gray-600 ml-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
+        odio
+        nemo quibusdam cum
+        dolorem corporis quae pariatur.</p>
     <div class="container mx-auto mt-8 mb-8">
         <section class="bg-white p-8 rounded shadow-md">
-            <h2 class="text-2xl text-black font-bold mb-2">Air Quality Monitoring</h2>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt delectus ducimus
-                vero
-                alias voluptatum doloribus beatae consequuntur, a aliquam sed.</p>
             <div class="col-span-3 mt-8">
                 <iframe src="https://www.iqair.com/air-quality-map" width="100%" height="600" frameborder="0"
                     allowfullscreen></iframe>
