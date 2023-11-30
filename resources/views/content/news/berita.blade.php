@@ -27,12 +27,18 @@
     <div style="display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 20px;">
         @foreach ($posts->sortByDesc('created_at') as $post)
             <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                        alt="Shoes" />
-                </figure>
+                @if ($post->image)
+                    <figure><img src="{{ asset('storage/' . $post->image) }}" alt="Shoes" />
+                    </figure>
+                @else
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                            alt="Shoes" />
+                    </figure>
+                @endif
                 <div class="card-body">
                     <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
-                    <p>{{ strip_tags($post->body) }}</p>
+                    <p>{{ strip_tags(Str::ucfirst(Str::limit($post->body, 200))) }}
+                    </p>
                     <a href="/posts/{{ $post->slug }}">
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Baca Selengkapnya</button>

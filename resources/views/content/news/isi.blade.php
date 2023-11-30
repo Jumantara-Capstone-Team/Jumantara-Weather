@@ -17,8 +17,8 @@
             </button>
         </a>
     </div>
-    <div class="container mx-auto bg-white shadow-lg p-8 my-10 text-center rounded-3xl">
-        <h1 class="text-3xl text-black font-semibold mb-6">{{ $post->title }}</h1>
+    <div class="container mx-auto bg-white shadow-lg p-8 my-10  rounded-3xl">
+        <h1 class="text-3xl text-black font-semibold mb-6 text-center">{{ $post->title }}</h1>
         <img src="{{ asset('/img/shoes.jpg') }}" alt="Gambar Berita" class="mx-auto block rounded-xl mb-4">
         <div class="flex justify-center items-center space-x-8 text-gray-500 text-sm">
             <p class="author"><i class="fas fa-user"></i>{{ $post->author }}</p>
