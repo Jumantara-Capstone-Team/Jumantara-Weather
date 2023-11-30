@@ -31,13 +31,13 @@
                     <figure><img src="{{ asset('storage/' . $post->image) }}" alt="Shoes" />
                     </figure>
                 @else
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" />
+                    <figure><img src="{{ asset('img/asset/not-found/not-found.png') }}" alt="Shoes" />
                     </figure>
                 @endif
                 <div class="card-body">
                     <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
-                    <p>{{ strip_tags(Str::ucfirst(Str::limit($post->body, 200))) }}
+                    <p class="text-gray-600">{{ $post->selected_country }}</p>
+                    <p class="text-gray-600">{{ strip_tags(Str::ucfirst(Str::limit($post->body, 200))) }}
                     </p>
                     <a href="/posts/{{ $post->slug }}">
                         <div class="card-actions justify-end">
