@@ -6,6 +6,7 @@ use App\Http\Controllers\{
     BerandaController,
     AuthController,
     PostController,
+    WeatherController,
     QualityController,
     DashboardPostController,
     DashboardQualityController,
@@ -38,6 +39,9 @@ Route::fallback(function () {
 });
 
 Route::get('/search', [SearchController::class, 'index']);
+
+// Weather Controller
+Route::get('/weather', [WeatherController::class, 'index']);
 
 // Route Air Quality
 Route::get('/quality', [QualityController::class, 'index']);
