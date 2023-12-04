@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Data Table News | Jumantara</title>
+    <title>Data Table Air Quality | Jumantara</title>
 
-    <link href="{{ asset('/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('/img/icon.png') }}" rel="apple-touch-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="  {{ asset('/img/main/logo.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="  {{ asset('/img/main/logo.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="  {{ asset('/img/main/logo.png') }}" />
 
 
     <link href="{{ asset('vendor/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">

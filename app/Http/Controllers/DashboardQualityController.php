@@ -67,7 +67,7 @@ class DashboardQualityController extends Controller
      */
     public function show(Quality $quality)
     {
-        return view('content.quality.isi', [
+        return view('content.quality.detail-quality', [
             "title" => "Isi Quality Quality",
             "quality" => $quality
         ]);
