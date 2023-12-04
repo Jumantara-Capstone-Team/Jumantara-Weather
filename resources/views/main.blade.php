@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>Know your weather now and in the future | Jumantara</title>
 
 @include('components.head.head')
 
@@ -12,12 +13,13 @@
         @include('components.beranda.collaboration.collaboration')
         @include('components.beranda.benefit.benefit')
         @include('components.beranda.cuaca.cuaca')
+        {{-- @include('components.beranda.suhu.suhu') --}}
         @include('components.beranda.news.news')
         @include('components.beranda.motivasi.motivasi')
 
         @include('components.beranda.faq.faq')
 
-        {{-- @include('components.beranda.suhu.suhu') --}}
+
     </section>
 </body>
 @include('components.footer.footer')

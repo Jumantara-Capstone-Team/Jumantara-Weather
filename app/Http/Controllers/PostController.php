@@ -23,7 +23,7 @@ class PostController extends Controller
     {
         $latestPosts = Post::orderBy('created_at', 'desc')->take(4)->get();
 
-        return view('content.news.isi', [
+        return view('content.news.detail-berita', [
             "title" => "Isi Berita",
             "post" => $post,
             "latestPosts" => $latestPosts,
@@ -37,7 +37,7 @@ class PostController extends Controller
                      ->orWhere('body', 'LIKE', "%$query%")
                      ->paginate(8);
     
-        return view('konten.berita.berita', [
+        return view('content.news.berita', [
             "title" => "Hasil Pencarian",
             "posts" => $posts
         ]);

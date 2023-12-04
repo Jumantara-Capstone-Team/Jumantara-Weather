@@ -1,188 +1,158 @@
-            <div class="forecast-table">
-                <div class="container">
-                    <form action="#" class="find-location">
-                        <input type="text" placeholder="Cari Lokasi">
-                        <input type="submit" value="Cari">
-                    </form>
+<section class="bg-gray-50 dark:bg-gray-800 container mx-auto p-4 md:p-8 bg-white rounded-lg shadow-md mb-5">
+
+    <!-- Form Cari Lokasi -->
+    <form action="#" class="mb-4 md:mb-8 max-w-md mx-auto">
+        <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+            <input type="text" placeholder="Cari Lokasi"
+                class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg mb-2 md:mb-0">
+            <button type="submit" class="w-full md:w-auto px-4 py-2 bg-blue-500 text-white rounded-lg">Cari</button>
+        </div>
+    </form>
+
+
+    <!-- Informasi Cuaca -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+
+        <!-- Hari Ini -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold mb-2 md:mb-4">Hari Ini</h3>
+            <div class="flex items-center mb-2 md:mb-4">
+                <div class="text-2xl md:text-4xl font-bold mr-2" id="temperature">29<sup>o</sup>C</div>
+                <div class="forecast-icon">
+                    <img src="images/icons/icon-1.svg" alt="" width=48>
                 </div>
-                <div class="container">
-                    <div class="forecast-container">
-                        <div class="today forecast">
-                            <div class="forecast-header">
-                                <div class="day">Senin</div>
-                                <div class="date">6 Oktober</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="location">Jakarta</div>
-                                <div class="degree">
-                                    <div class="num">29<sup>o</sup>C</div>
-                                    <div class="forecast-icon">
-                                        <img src="images/icons/icon-1.svg" alt="" width=90>
-                                    </div>
-                                </div>
-                                <span><img src="images/icon-umberella.png" alt="">20%</span>
-                                <span><img src="images/icon-wind.png" alt="">18km/h</span>
-                                <span><img src="images/icon-compass.png" alt="">Timur</span>
-                            </div>
-                        </div>
-                        <div class="forecast">
-                            <div class="forecast-header">
-                                <div class="day">Selasa</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="forecast-icon">
-                                    <img src="images/icons/icon-3.svg" alt="" width=48>
-                                </div>
-                                <div class="degree">23<sup>o</sup>C</div>
-                                <small>18<sup>o</sup></small>
-                            </div>
-                        </div>
-                        <div class="forecast">
-                            <div class="forecast-header">
-                                <div class="day">Rabu</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="forecast-icon">
-                                    <img src="images/icons/icon-5.svg" alt="" width=48>
-                                </div>
-                                <div class="degree">23<sup>o</sup>C</div>
-                                <small>18<sup>o</sup></small>
-                            </div>
-                        </div>
-                        <div class="forecast">
-                            <div class="forecast-header">
-                                <div class="day">Kamis</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="forecast-icon">
-                                    <img src="images/icons/icon-7.svg" alt="" width=48>
-                                </div>
-                                <div class="degree">23<sup>o</sup>C</div>
-                                <small>18<sup>o</sup></small>
-                            </div>
-                        </div>
-                        <div class="forecast">
-                            <div class="forecast-header">
-                                <div class="day">Jumat</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="forecast-icon">
-                                    <img src="images/icons/icon-12.svg" alt="" width=48>
-                                </div>
-                                <div class="degree">23<sup>o</sup>C</div>
-                                <small>18<sup>o</sup></small>
-                            </div>
-                        </div>
-                        <div class="forecast">
-                            <div class="forecast-header">
-                                <div class="day">Sabtu</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="forecast-icon">
-                                    <img src="images/icons/icon-13.svg" alt="" width=48>
-                                </div>
-                                <div class="degree">23<sup>o</sup>C</div>
-                                <small>18<sup>o</sup></small>
-                            </div>
-                        </div>
-                        <div class="forecast">
-                            <div class="forecast-header">
-                                <div class="day">Minggu</div>
-                            </div> <!-- .forecast-header -->
-                            <div class="forecast-content">
-                                <div class="forecast-icon">
-                                    <img src="images/icons/icon-14.svg" alt="" width=48>
-                                </div>
-                                <div class="degree">23<sup>o</sup>C</div>
-                                <small>18<sup>o</sup></small>
-                            </div>
-                        </div>
+            </div>
+            <p class="mb-2 md:mb-4" id="weather">Cerah</p>
+            <div class="flex items-center space-x-2 md:space-x-4">
+                <span><img src="images/icon-umberella.png" alt="" class="w-3 md:w-4 h-3 md:h-4"> 20%</span>
+                <span><img src="images/icon-wind.png" alt="" class="w-3 md:w-4 h-3 md:h-4"> 18km/h</span>
+                <span><img src="images/icon-compass.png" alt="" class="w-3 md:w-4 h-3 md:h-4"> Timur</span>
+            </div>
+        </div>
+
+        <!-- Perkiraan Mingguan -->
+        <div class="col-span-2 lg:col-span-1 space-y-4">
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-2 md:mb-4">Perkiraan Mingguan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Hari 1 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Senin</div>
+                        <div class="text-gray-500" id="humidity">28<sup>o</sup>C</div>
                     </div>
 
+                    <!-- Hari 2 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Selasa</div>
+                        <div class="text-gray-500">30<sup>o</sup>C</div>
+                    </div>
+                    <!-- Tambahkan hari-hari berikutnya sesuai kebutuhan -->
+                </div>
+            </div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 space-y-4">
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-2 md:mb-4">Perkiraan Mingguan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Hari 1 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Senin</div>
+                        <div class="text-gray-500" id="humidity">28<sup>o</sup>C</div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="suhu-card">
-                                        <div class="suhu-card-header">
-                                            <h4 class="suhu-card-content-title">Air Quality</h4>
-                                        </div>
-                                        <div class="suhu-card-content">
-                                        <h2 class="suhu-card-content-isi">70</h2>
-                                        <p class="suhu-card-content-description">Good</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="suhu-card">
-                                    <div class="suhu-card-header">
-                                        <h4 class="suhu-card-content-title">Wind Status</h4>
-                                    </div>
-                                    <div class="suhu-card-content">
-                                        <h2 class="suhu-card-content-isi">18km/h</h2>
-                                        <p class="suhu-card-content-description">Good</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="suhu-card">
-                                    <div class="suhu-card-header">
-                                        <h4 class="suhu-card-content-title">Humidity</h4>
-                                    </div>
-                                    <div class="suhu-card-content">
-                                        <h2 class="suhu-card-content-isi">12%</h2>
-                                        <p class="suhu-card-content-description">Normal</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="suhu-card">
-                                    <div class="suhu-card-header">
-                                        <h4 class="suhu-card-content-title">Visibility</h4>
-                                    </div>
-                                    <div class="suhu-card-content">
-                                        <h2 class="suhu-card-content-isi">5.2km</h2>
-                                        <p class="suhu-card-content-description">Good</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    <!-- Tambahkan script ini setelah elemen HTML di atas -->
-                    <script>
-                        function getWeatherData() {
-                            fetch('http://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=4a5840a84371e968da5eb7ffc24115e7')
-                                .then(response => response.json())
-                                .then(data => {
-                                    updateWeatherInfo(data);
-                                })
-                                .catch(error => console.error('Error:', error));
-                        }
+                    <!-- Hari 2 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Selasa</div>
+                        <div class="text-gray-500">30<sup>o</sup>C</div>
+                    </div>
+                    <!-- Tambahkan hari-hari berikutnya sesuai kebutuhan -->
+                </div>
+            </div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 space-y-4">
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-2 md:mb-4">Perkiraan Mingguan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Hari 1 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Senin</div>
+                        <div class="text-gray-500" id="humidity">28<sup>o</sup>C</div>
+                    </div>
 
-                        function updateWeatherInfo(data) {
-                            // Update informasi cuaca untuk hari ini
-                            document.getElementById("temperature").textContent = `${data.main.temp}°C`;
-                            document.getElementById("humidity").textContent = `${data.main.humidity}%`;
-                            document.getElementById("weather").textContent = data.weather[0].description;
+                    <!-- Hari 2 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Selasa</div>
+                        <div class="text-gray-500">30<sup>o</sup>C</div>
+                    </div>
+                    <!-- Tambahkan hari-hari berikutnya sesuai kebutuhan -->
+                </div>
+            </div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 space-y-4">
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-2 md:mb-4">Perkiraan Mingguan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Hari 1 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Senin</div>
+                        <div class="text-gray-500" id="humidity">28<sup>o</sup>C</div>
+                    </div>
 
-                            // Update informasi cuaca untuk hari Senin
-                            document.querySelector(".today .num").textContent = Math.round(data.main.temp);
-                            document.querySelector(".today .suhu-icon img").src = getWeatherIcon(data.weather[0].icon);
-                            document.getElementById("humidity").textContent = `${data.main.humidity}%`;
-                            document.getElementById("weather").textContent = data.weather[0].description;
+                    <!-- Hari 2 -->
+                    <div class="flex items-center mb-2 md:mb-4">
+                        <div class="text-base md:text-lg font-semibold mr-2">Selasa</div>
+                        <div class="text-gray-500">30<sup>o</sup>C</div>
+                    </div>
+                    <!-- Tambahkan hari-hari berikutnya sesuai kebutuhan -->
+                </div>
+            </div>
+        </div>
 
-                            // Update informasi cuaca untuk hari-hari berikutnya
-                            const days = ["Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
-                            for (let i = 0; i < days.length; i++) {
-                                const dayElement = document.querySelector(`.${days[i]} .degree`);
-                                dayElement.textContent = `${Math.round(data.main.temp)}°C`;
-                                document.querySelector(`.${days[i]} .suhu-icon img`).src = getWeatherIcon(data.weather[0].icon);
-                            }
-                        }
+    </div>
 
-                        // Mendapatkan ikon cuaca berdasarkan kode ikon dari OpenWeatherMap
-                        function getWeatherIcon(iconCode) {
-                            return `http://openweathermap.org/img/w/${iconCode}.png`;
-                        }
+    <!-- Info Cuaca Lainnya -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-4 md:mt-8">
+        <!-- Card Air Quality -->
+        <div class="suhu-card bg-white rounded-xl shadow-md">
+            <div class="suhu-card-header">
+                <h4 class="suhu-card-content-title ml-2">Air Quality</h4>
+            </div>
+            <div class="suhu-card-content">
+                <h2 class="suhu-card-content-isi ml-2">70</h2>
+                <p class="suhu-card-content-description ml-2">Good</p>
+            </div>
+        </div>
 
-                        getWeatherData();
-                    </script>
+
+        <div class="suhu-card bg-white rounded-xl shadow-md">
+            <div class="suhu-card-header">
+                <h4 class="suhu-card-content-title ml-2">Air Quality</h4>
+            </div>
+            <div class="suhu-card-content">
+                <h2 class="suhu-card-content-isi ml-2">70</h2>
+                <p class="suhu-card-content-description ml-2">Good</p>
+            </div>
+        </div>
+
+        <div class="suhu-card bg-white rounded-xl shadow-md">
+            <div class="suhu-card-header">
+                <h4 class="suhu-card-content-title ml-2">Air Quality</h4>
+            </div>
+            <div class="suhu-card-content">
+                <h2 class="suhu-card-content-isi ml-2">70</h2>
+                <p class="suhu-card-content-description ml-2">Good</p>
+            </div>
+        </div>
+
+        <div class="suhu-card bg-white rounded-xl shadow-md">
+            <div class="suhu-card-header">
+                <h4 class="suhu-card-content-title ml-2">Air Quality</h4>
+            </div>
+            <div class="suhu-card-content">
+                <h2 class="suhu-card-content-isi ml-2">70</h2>
+                <p class="suhu-card-content-description ml-2">Good</p>
+            </div>
+        </div>
+
+    </div>
+</section>

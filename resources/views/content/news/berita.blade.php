@@ -7,8 +7,8 @@
 
 <body class="bg-gray-50 font-sans dark:bg-gray-800">
 
-    <h1 class="text-gray-800 ml-3 mt-20 mb-2 text-3xl font-bold">Berita Terbaru Jumantara</h1>
-    <p class=" text-gray-600 ml-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
+    <h1 class="text-gray-800 ml-6 mt-20 mb-2 text-3xl font-bold">Berita Terbaru Jumantara</h1>
+    <p class=" text-gray-600 ml-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
         odio
         nemo quibusdam cum
         dolorem corporis quae pariatur.</p>
@@ -47,58 +47,6 @@
                 </div>
             </div>
         @endforeach
-
-        {{-- <div class="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div> --}}
-
     </div>
 
 
