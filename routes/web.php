@@ -41,6 +41,7 @@ Route::get('/search', [SearchController::class, 'index']);
 
 // Route Air Quality
 Route::get('/quality', [QualityController::class, 'index']);
+Route::get('/quality/{quality:slug}', [QualityController::class, 'show']);
 
 
 // Login Route

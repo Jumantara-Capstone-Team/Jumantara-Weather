@@ -29,9 +29,9 @@
     <!-- Favicon -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="  {{ asset('img/logo.svg') }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="  {{ asset('img/logo.svg') }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="  {{ asset('img/logo.svg') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="  {{ asset('/img/main/logo.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="  {{ asset('/img/main/logo.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="  {{ asset('/img/main/logo.png') }}" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />

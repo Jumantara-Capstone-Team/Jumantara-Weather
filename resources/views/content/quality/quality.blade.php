@@ -56,69 +56,32 @@
         </div>
 
         <div class="flex flex-wrap justify-center mb-10 -mx-4">
-            <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
-                        <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
-                        <a href="">
-                            <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Baca Selengkapnya</button>
-                            </div>
-                        </a>
+            @foreach ($quality->sortByDesc('created_at') as $quality)
+                <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
+                    <div class="card bg-base-100 shadow-xl">
+                        @if ($quality->image)
+                            <figure><img src="{{ asset('storage/' . $quality->image) }}" alt="Air Quality" />
+                            </figure>
+                        @else
+                            <figure><img src="{{ asset('img/asset/not-found/not-found.png') }}" alt="Air Quality" />
+                            </figure>
+                        @endif
+                        <div class="card-body">
+                            <h2 class="card-title text-lg">{{ Str::ucfirst(Str::limit($quality->title, 40)) }}
+                            </h2>
+                            <p class="text-base text-gray-600 text-sm">
+                                {{ strip_tags(Str::ucfirst(Str::limit($quality->body, 200))) }}
+                            </p>
+                            <a href="/quality/{{ $quality->slug }}">
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary">Baca Selengkapnya</button>
+                                </div>
+                            </a>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
-                        <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
-                        <a href="">
-                            <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Baca Selengkapnya</button>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
-                        <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
-                        <a href="">
-                            <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Baca Selengkapnya</button>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="{{ asset('/img/air_quality.png') }}" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-lg">Melakukan pengecekan kualitas udara di daerah masing-masing</h2>
-                        <p class="text-base text-gray-600 text-sm">If a dog chews shoes whose shoes does he choose?</p>
-                        <a href="">
-                            <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Baca Selengkapnya</button>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 

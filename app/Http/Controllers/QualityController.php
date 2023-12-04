@@ -17,4 +17,16 @@ class QualityController extends Controller
             "quality" => $quality,
         ]);
     }
+
+    public function show(Quality $quality)
+    {
+        $latestPosts = Quality::orderBy('created_at', 'desc')->take(4)->get();
+
+        return view('content.quality.detail-quality', [
+            "title" => "Isi Quality",
+            "quality" => $quality,
+            "latestPosts" => $latestPosts,
+        ]);
+    }
+
 }
