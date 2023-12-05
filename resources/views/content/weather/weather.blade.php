@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Weather | Jumantara</title>
+<title>Jumantara | Find Current Weather Forecast Here</title>
 
 @include('components.head.head')
 

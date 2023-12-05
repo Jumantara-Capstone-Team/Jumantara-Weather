@@ -1,4 +1,4 @@
-<title>Radar | Jumantara</title>
+<title>Jumantara | Find Current Conditions Using Our Weather Maps</title>
 
 @include('components.head.head')
 

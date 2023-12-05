@@ -37,7 +37,7 @@ class PostController extends Controller
                      ->orWhere('body', 'LIKE', "%$query%")
                      ->paginate(8);
     
-        return view('content.news.berita', [
+        return view('content.news.berita.search', [
             "title" => "Hasil Pencarian",
             "posts" => $posts
         ]);

@@ -1,4 +1,4 @@
-<title>Air Quality | Jumantara</title>
+<title>Jumantara | View Ratings and Air Quality Around You</title>
 
 @include('components.head.head')
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>News | Jumantara</title>
+<title>Jumantara | Find Various Weather News Here</title>
 @include('components.head.head')
 
 @include('components.navbar.navbar')
@@ -15,9 +15,12 @@
     <div class="flex flex-col items-center mb-8">
         <div class="w-96 bg-white shadow-md rounded-full mb-4 mt-4">
             <div class="flex items-center">
-                <input type="text" placeholder="Search..."
-                    class="w-full text-black px-4 py-2 focus:outline-none rounded-l-full">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-r-full">Search</button>
+                <form action="{{ route('berita.search') }}" method="GET" class="flex w-full">
+                    <input type="text" placeholder="Search..." name="query"
+                        class="w-full text-black px-4 py-2 focus:outline-none rounded-l-full">
+                    <button
+                        class="bg-blue-500 text-white px-4 py-2 rounded-r-full transition duration-300 ease-in-out hover:bg-blue-700">Search</button>
+                </form>
             </div>
         </div>
     </div>

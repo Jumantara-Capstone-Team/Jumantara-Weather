@@ -1,6 +1,4 @@
 <head>
-
-    <title>Beranda | Info Cuaca</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,11 +15,6 @@
 
         <link href="{{ asset('/img/main/logo.png') }}" rel="icon">
         <link href="{{ asset('/img/main/logo.png') }}" rel="apple-touch-icon">
-
-        <!-- PWA  -->
-        <meta name="theme-color" content="#6777ef" />
-        <link rel="apple-touch-icon" href="{{ asset('logo.png') }}">
-        <link rel="manifest" href="{{ asset('/manifest.json') }}">
 
 
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.12/dist/full.min.css" rel="stylesheet" type="text/css" />
