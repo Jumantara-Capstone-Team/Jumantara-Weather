@@ -8,6 +8,7 @@ use App\Http\Controllers\{
     PostController,
     WeatherController,
     QualityController,
+    RadarController,
     DashboardPostController,
     DashboardQualityController,
     SearchController
@@ -42,6 +43,9 @@ Route::get('/search', [SearchController::class, 'index']);
 
 // Weather Controller
 Route::get('/weather', [WeatherController::class, 'index']);
+
+// Route Radar
+Route::get('/radar', [RadarController::class, 'index']);
 
 // Route Air Quality
 Route::get('/quality', [QualityController::class, 'index']);
