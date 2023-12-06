@@ -60,7 +60,7 @@
         mobileMenu.classList.toggle('hidden');
     });
 
-    // Add swipe functionality for mobile
+
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -74,13 +74,11 @@
     });
 
     function handleSwipe() {
-        const threshold = 50; // Adjust the threshold as needed
+        const threshold = 50;
 
         if (touchStartX - touchEndX > threshold) {
-            // Swipe left, you can add additional logic or actions here
             document.getElementById('mobile-menu-2').classList.add('hidden');
         } else if (touchEndX - touchStartX > threshold) {
-            // Swipe right, you can add additional logic or actions here
             document.getElementById('mobile-menu-2').classList.remove('hidden');
         }
     }

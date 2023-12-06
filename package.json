@@ -11,6 +11,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "swiper": "^11.0.5",
         "workbox-sw": "^7.0.0"
     }
 }

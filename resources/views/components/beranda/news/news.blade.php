@@ -5,42 +5,28 @@
         sequi ut alias pariatur odio suscipit nostrum, numquam accusamus quas?</p>
 
     <div class="flex flex-col md:flex-row md:justify-center">
-
-        <div class="card card-compact w-full md:w-96 bg-base-100 shadow-xl mx-2 mb-4 md:mb-0">
-            <figure><img src="{{ asset('/img/download.jpeg') }}" alt="News" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Terjadi Badai</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Baca Selengkapnya</button>
+        @foreach ($posts->sortByDesc('created_at')->take(3) as $post)
+            <div class="card card-compact w-full md:w-96 bg-base-100 shadow-xl mx-2 mb-4 md:mb-0">
+                @if ($post->image)
+                    <figure>
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="Shoes" />
+                    </figure>
+                @else
+                    <figure>
+                        <img src="{{ asset('img/asset/not-found/not-found.png') }}" alt="Shoes" />
+                    </figure>
+                @endif
+                <div class="card-body">
+                    <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
+                    <p>{{ strip_tags(Str::ucfirst(Str::limit($post->body, 200))) }}</p>
+                    <a href="/posts/{{ $post->slug }}">
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Baca Selengkapnya</button>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <div class="card card-compact w-full md:w-96 bg-base-100 shadow-xl mx-2 mb-4 md:mb-0">
-            <figure><img src="{{ asset('/img/download.jpeg') }}" alt="News" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Terjadi Badai</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Baca Selengkapnya</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card card-compact w-full md:w-96 bg-base-100 shadow-xl mx-2 mb-4 md:mb-0">
-            <figure><img src="{{ asset('/img/download.jpeg') }}" alt="News" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Terjadi Badai</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Baca Selengkapnya</button>
-                </div>
-            </div>
-        </div>
+        @endforeach
 
     </div>
 
