@@ -12,7 +12,6 @@
 
         @include('components.beranda.collaboration.collaboration')
         @include('components.beranda.benefit.benefit')
-        @include('components.beranda.cuaca.cuaca')
         @include('components.beranda.video.video')
         {{-- @include('components.beranda.suhu.suhu') --}}
         @include('components.beranda.news.news')

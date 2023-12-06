@@ -112,7 +112,6 @@ class DashboardPostController extends Controller
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
     
-        // Atur nilai 'category_id' ke null jika tidak ada yang dipilih
         $validatedData['category_id'] = $request->input('category_id', null);
     
         $validatedData['user_id'] = auth()->user()->id;

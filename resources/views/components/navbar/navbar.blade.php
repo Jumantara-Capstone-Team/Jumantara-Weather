@@ -23,7 +23,8 @@
                     </svg>
                 </button>
             </div>
-            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1 overflow-x-auto"
+                id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
                         <a href="/"
@@ -58,4 +59,29 @@
         var mobileMenu = document.getElementById('mobile-menu-2');
         mobileMenu.classList.toggle('hidden');
     });
+
+    // Add swipe functionality for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.getElementById('mobile-menu-2').addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.getElementById('mobile-menu-2').addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const threshold = 50; // Adjust the threshold as needed
+
+        if (touchStartX - touchEndX > threshold) {
+            // Swipe left, you can add additional logic or actions here
+            document.getElementById('mobile-menu-2').classList.add('hidden');
+        } else if (touchEndX - touchStartX > threshold) {
+            // Swipe right, you can add additional logic or actions here
+            document.getElementById('mobile-menu-2').classList.remove('hidden');
+        }
+    }
 </script>

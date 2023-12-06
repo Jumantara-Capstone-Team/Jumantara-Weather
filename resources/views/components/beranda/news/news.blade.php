@@ -1,4 +1,4 @@
-<section class="bg-gray-50 dark:bg-gray-800 p-4">
+<section class="bg-gray-50 dark:bg-gray-800 p-4 mt-10">
 
     <h1 class="mb-2 text-3xl font-bold text-center">Berita Cuaca Terkini</h1>
     <p class="text-center mb-8 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio
