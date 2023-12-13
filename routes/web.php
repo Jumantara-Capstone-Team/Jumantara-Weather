@@ -33,7 +33,8 @@ Route::get('/', [BerandaController::class, 'index']);
 Route::get('/berita', [PostController::class, 'index'])->name('berita.index');
 Route::get('/berita/{category}', [PostController::class, 'index'])->name('berita.category');
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
-Route::get('/berita/search', [PostController::class, 'search'])->name('berita.search');
+Route::get('/berita/search','PostController@search')->name('berita.search');
+
 
 Route::fallback(function () {
     return view('error/404');

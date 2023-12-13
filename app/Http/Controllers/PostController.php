@@ -32,15 +32,13 @@ class PostController extends Controller
 
     public function search(Request $request)
     {
-        $query = $request->input('query');
-        $posts = Post::where('title', 'LIKE', "%$query%")
-                     ->orWhere('body', 'LIKE', "%$query%")
-                     ->paginate(8);
-    
-        return view('content.news.berita.search', [
-            "title" => "Hasil Pencarian",
-            "posts" => $posts
-        ]);
+        $searchTerm = $request->input('search');
+        
+        $posts = Post::where('title', 'like', '%' . $searchTerm . '%')
+                     ->orWhere('body', 'like', '%' . $searchTerm . '%')
+                     ->get();
+
+        return view('content.news.berita', ['posts' => $posts]);
     }
     
     public function showNotifications()
