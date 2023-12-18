@@ -2,15 +2,16 @@
 
 ## Overview
 
-Jumantara is a web application that serves as a dedicated weather monitoring tool. It provides users with features such as checking weather radar, temperature, air quality index, and accessing air quality facts and weather news. The application utilizes data from BMKG, OpenWeather API, and JSON data for countries. Additionally, it leverages Tinker for creating news in Laravel, Daisy UI for UI components, and is deployed on Vercel with a database stored on Aiven.
+Jumantara is a comprehensive weather monitoring web application that caters to users' needs with features such as checking real-time weather radar, temperature updates, air quality index monitoring, access to air quality facts, and the latest weather news. The application utilizes data from BMKG, OpenWeather API, and JSON data for countries. Additionally, it integrates Tinker for news creation, Daisy UI for UI components, and is deployed on Vercel with a database hosted on Aiven.
 
 ## Features
 
-- Weather Radar: Check real-time weather radar information.
-- Temperature: Get current temperature updates.
-- Air Quality Index: Monitor the air quality index.
-- Air Quality Facts: Access information about air quality.
-- Weather News: Read the latest weather-related news.
+- **Weather Radar:** View real-time weather radar information.
+- **Temperature:** Obtain current temperature updates.
+- **Air Quality Index:** Monitor the air quality index.
+- **Air Quality Facts:** Access information about air quality.
+- **Weather News:** Read the latest weather-related news.
+- **Admin Dashboard:** Control panel for administrators.
 
 ## Resources
 
@@ -96,12 +97,12 @@ To clone and set up the Jumantara application on your local machine, follow thes
 
 ## Admin Dashboard
 
-The admin dashboard is built using Bootstrap. To access it, log in as an admin user.
+The application features a robust admin dashboard built with Bootstrap, providing administrators with control over various aspects of the application.
 
 ## Push Notifications
 
-The application supports push notifications for important weather updates. Make sure to enable notifications in your browser.
+The application supports push notifications for important weather updates. Ensure notifications are enabled in your browser.
 
 ---
 
-Feel free to contribute, report issues, or suggest improvements to make Jumantara a more robust weather monitoring application!
+Feel free to contribute, report issues, or suggest improvements to enhance Jumantara as a reliable weather monitoring application!
