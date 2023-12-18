@@ -8,15 +8,14 @@
     <div class="container mx-auto px-4">
         <h1 class="text-gray-800 mt-20 mb-2 text-3xl font-bold sm:text-3xl md:text-3xl lg:text-3xl">Air Quality
             Monitoring</h1>
-        <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
-            odio
-            nemo quibusdam cum dolorem corporis quae pariatur.</p>
+        <p class="text-gray-600 mb-8">Air Quality adalah untuk memonitoring keadaan kualitas udara di berbagai negara.
+        </p>
 
         <section class="bg-white p-4 md:p-8 rounded shadow-md mb-8">
             <iframe src="https://www.iqair.com/air-quality-map" width="100%" height="400" frameborder="0"
                 allowfullscreen></iframe>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 rounded-xl">
+            {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 rounded-xl">
                 <div class="bg-blue-200 p-4 rounded-md">
                     <h3 class="text-lg font-semibold mb-2 text-gray-800">Jakarta</h3>
                     <p class="text-gray-700">Air Quality Index: 85</p>
@@ -36,14 +35,12 @@
                     <p class="text-gray-700">Air Quality Index: 78</p>
                     <p class="text-gray-700">Temperature: 22°C</p>
                 </div>
-            </div>
+            </div> --}}
         </section>
 
         <h1 class="mt-5 font-bold text-black text-3xl sm:text-3xl md:text-3xl lg:text-3xl">Air Quality Tips and Fact
         </h1>
-        <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia recusandae
-            explicabo
-            quaerat, libero deserunt illum iusto dignissimos fuga nemo provident?</p>
+        <p class="text-gray-600 mb-8">Ayo Temukan Tips dan Fakta tentang menjaga kualitas udara sekitar kita!</p>
 
         <div class="mb-8">
             <div class="w-full bg-white shadow-md rounded-full mb-4">
@@ -59,13 +56,12 @@
             @foreach ($quality->sortByDesc('created_at') as $quality)
                 <div class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 px-4 mb-8">
                     <div class="card bg-base-100 shadow-xl">
-                        @if ($quality->image)
-                            <figure><img src="{{ asset('storage/' . $quality->image) }}" alt="Air Quality" />
-                            </figure>
-                        @else
-                            <figure><img src="{{ asset('img/asset/not-found/not-found.png') }}" alt="Air Quality" />
-                            </figure>
-                        @endif
+
+
+                        <figure><img src="https://drive.google.com/uc?id=10JSLsn7-xskxvK8w3vPIkbphXb8enCE7"
+                                alt="Air Quality" />
+                        </figure>
+
                         <div class="card-body">
                             <h2 class="card-title text-lg">{{ Str::ucfirst(Str::limit($quality->title, 40)) }}
                             </h2>

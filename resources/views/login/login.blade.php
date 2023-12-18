@@ -67,7 +67,7 @@
             <div class="flex items-center justify-center mt-6">
                 <a href="#" class="flex items-center space-x-2 text-gray-600 hover:underline">
                     <i class="fab fa-facebook"></i>
-                    <span>Login with Facebook</span>
+                    <span>Jumantara Aplikasi Setia Pemantau Cuaca</span>
                 </a>
             </div>
         </form>

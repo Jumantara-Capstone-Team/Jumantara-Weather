@@ -5,13 +5,10 @@
 
 @include('components.navbar.navbar')
 
-<body class="bg-gray-50 font-sans dark:bg-gray-800">
+<body class="bg-white font-sans dark:bg-gray-800">
 
     <h1 class="text-gray-800 ml-6 mt-20 mb-2 text-3xl font-bold">Berita Terbaru Jumantara</h1>
-    <p class=" text-gray-600 ml-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim quidem quod,
-        odio
-        nemo quibusdam cum
-        dolorem corporis quae pariatur.</p>
+    <p class=" text-gray-600 ml-6">Berita dan Artikel terbaru dari Jumantara Weather</p>
     <div class="flex flex-col items-center mb-8">
         <div class="w-96 bg-white shadow-md rounded-full mb-4 mt-4">
             <div class="flex items-center">
@@ -29,18 +26,17 @@
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 20px;">
         @foreach ($posts->sortByDesc('created_at') as $post)
-            <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                @if ($post->image)
-                    <figure><img src="{{ asset('storage/' . $post->image) }}" alt="Shoes" />
-                    </figure>
-                @else
-                    <figure><img src="{{ asset('img/asset/not-found/not-found.png') }}" alt="Shoes" />
-                    </figure>
-                @endif
+            <div class="card card-compact w-96 bg-base-100 shadow-xl mb-10 dark:bg-white">
+
+
+                <figure><img src="https://drive.google.com/uc?id=1FGUdPaMJLj9avfjBCej43rS7XmI3js0R" alt="Shoes" />
+                </figure>
+
                 <div class="card-body">
-                    <h2 class="card-title">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
-                    <p class="text-gray-600">{{ $post->selected_country }}</p>
-                    <p class="text-gray-600">{{ strip_tags(Str::ucfirst(Str::limit($post->body, 200))) }}
+                    <h2 class="card-title dark:text-white">{{ Str::ucfirst(Str::limit($post->title, 40)) }}</h2>
+                    <p class="text-gray-600 dark:text-white">{{ $post->selected_country }}</p>
+                    <p class="text-gray-600 dark:text-white">
+                        {{ strip_tags(Str::ucfirst(Str::limit($post->body, 200))) }}
                     </p>
                     <a href="/posts/{{ $post->slug }}">
                         <div class="card-actions justify-end">

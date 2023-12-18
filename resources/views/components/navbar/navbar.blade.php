@@ -2,7 +2,7 @@
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900 fixed top-0 left-0 w-full shadow-lg z-50">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <a href="#" class="flex items-center">
-                <img src="{{ asset('img/main/logo.png') }}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
+                @include('components.svg.logo')
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Jumantara</span>
             </a>
             <div class="flex items-center lg:order-2">
@@ -33,7 +33,7 @@
                     </li>
                     <li>
                         <a href="/weather"
-                            class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Weather</a>
+                            class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Temperature</a>
                     </li>
                     <li>
                         <a href="/berita"

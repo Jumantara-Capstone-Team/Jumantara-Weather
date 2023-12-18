@@ -21,6 +21,10 @@
         rel="stylesheet">
 
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="{{ asset('css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.tutorialjinni.com/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.tutorialjinni.com/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" />
 </head>

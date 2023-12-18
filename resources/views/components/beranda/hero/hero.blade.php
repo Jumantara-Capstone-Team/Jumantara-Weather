@@ -4,16 +4,17 @@
           <div
               class="mr-auto place-self-center lg:col-span-7 container mx-auto p-4 animate__animated animate__slideInLeft">
               <h1
-                  class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-1xl dark:text-white">
+                  class="max-w-2xl mb-4 text-4xl text-black font-extrabold leading-none tracking-tight md:text-5xl xl:text-1xl dark:text-white">
                   Jumantara Aplikasi Setia <br />Pemantau Suhu, Udara, dan Cuaca!
               </h1>
               <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In nesciunt earum ipsa nemo quos ullam saepe
-                  obcaecati nobis aspernatur nisi.
+                  "Jumantara Aplikasi Setia" adalah solusi terdepan untuk memantau suhu, udara, dan cuaca. Aplikasi ini
+                  memberikan informasi real-time yang akurat, menjadikannya teman setia dalam menjaga keselamatan dan
+                  kenyamanan sehari-hari.
               </p>
               <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                  <a href="https://www.instagram.com/saipulimdn/?hl=id"
-                      class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                  <a href="https://www.instagram.com/jumantara.weather/?hl=id"
+                      class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white border border-green-400 rounded-lg sm:w-auto bg-green-400 hover:bg-green-600 hover:focus:ring-green-600 focus:ring-4 focus:ring-green-400 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                       {{-- <svg class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 496 512">
                           <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
@@ -25,7 +26,8 @@
               </div>
           </div>
           <div class="hidden lg:mt-0 lg:col-span-5 lg:flex animate__animated animate__slideInRight">
-              <img src="{{ asset('img/asset/hero/hero.png') }}" alt="hero image" />
+              @include('components.svg.hero')
+
           </div>
       </div>
   </section>

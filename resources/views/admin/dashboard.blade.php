@@ -103,24 +103,38 @@
                     </div>
                 </div>
             </div>
-
+            {{-- 
             <!-- Bootstrap {core JavaScript-->
             <script src="{{ asset('vendor/vendor/fontawesome-free/css/all.min.css') }}"></script>
             <script src="{{ asset('vendor/vendor/jquery/jquery.min.js') }}"></script>
             <script src="{{ asset('vendor/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
             <!-- Core plugin JavaScript-->
             <script src="{{ asset('vendor/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-            <!-- Custom scripts for all pages-->
-            <script src="{{ asset('js/admin/sb-admin-2.min.js') }}"></script>
+            <!-- Custom scripts for all pages--> --}}
+            {{-- <script src="{{ asset('js/admin/sb-admin-2.min.js') }}"></script> --}}
 
-            <!-- Page level plugins -->
+            {{-- <!-- Page level plugins -->
             <script src="{{ asset('vendor/vendor/chart.js/Chart.min.js') }}"></script>
 
             <!-- Page level custom scripts -->
             <script src="{{ asset('js/admin/demo/chart-area-demo.js') }}"></script>
-            <script src="{{ asset('js/admin/demo/chart-pie-demo.js') }}"></script>
+            <script src="{{ asset('js/admin/demo/chart-pie-demo.js') }}"></script> --}}
 
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+                integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"
+                integrity="sha512-+QnjQxxaOpoJ+AAeNgvVatHiUWEDbvHja9l46BHhmzvP0blLTXC4LsvwDVeNhGgqqGQYBQLFhdKFyjzPX6HGmw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.js"
+                integrity="sha512-M82XdXhPLLSki+Ld1MsafNzOgHQB3txZr8+SQlGXSwn6veeqtYhPLbQeAfk9Y/Q9/gXcfa1jWT4YYUeoei6Uow=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+                integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+            @include('components/admin/all/js/js')
+            @include('components/admin/all/js/min')
 </body>
 
 </html>

@@ -13,8 +13,8 @@
             crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-        <link rel="icon" href="{{ asset('img/main/logo.png') }}" type="image/png">
-
+        <link href="{{ asset('/img/main/logo.png') }}" rel="icon">
+        <link href="{{ asset('/img/main/logo.png') }}" rel="apple-touch-icon">
 
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.12/dist/full.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>

@@ -13,13 +13,11 @@
                      menjaga Anda tetap terhubung dengan kondisi lingkungan sekitar.
                  </p>
              </div>
-             <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('img/asset/why/why.png') }}"
-                 alt="dashboard feature image" />
+             @include('components.svg.benefit')
          </div>
          <!-- Row -->
          <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-             <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('img/asset/nature/natur.png') }}"
-                 alt="feature image 2" />
+             @include('components.svg.nature')
              <div class="text-gray-500 sm:text-lg dark:text-gray-400">
                  <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
                      Kenapa Kita Harus Peduli Dengan Alam Dan Lingkungan Sekitar?
