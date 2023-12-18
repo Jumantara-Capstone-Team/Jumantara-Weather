@@ -1,5 +1,5 @@
 <header class="fixed w-full z-50">
-    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900 fixed top-0 left-0 w-full shadow-lg z-50">
+    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900 fixed top-0 left-0 w-full shadow-sm z-50">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <a href="#" class="flex items-center">
                 @include('components.svg.logo')
