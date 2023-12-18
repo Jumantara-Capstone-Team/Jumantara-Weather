@@ -2,7 +2,7 @@
 
 ## Overview
 
-Jumantara is a web application that serves as a dedicated weather monitoring tool. It provides users with features such as checking weather radar, temperature, air quality index, and accessing air quality facts and weather news. The application utilizes data from BMKG, OpenWeather API, and JSON data for countries. Additionally, it leverages Tinker for creating news in Laravel and is deployed on Vercel with a database stored on Aiven.
+Jumantara is a web application that serves as a dedicated weather monitoring tool. It provides users with features such as checking weather radar, temperature, air quality index, and accessing air quality facts and weather news. The application utilizes data from BMKG, OpenWeather API, and JSON data for countries. Additionally, it leverages Tinker for creating news in Laravel, Daisy UI for UI components, and is deployed on Vercel with a database stored on Aiven.
 
 ## Features
 
@@ -28,6 +28,7 @@ Jumantara is a web application that serves as a dedicated weather monitoring too
 
 - Laravel PHP Framework
 - Tailwind CSS
+- Daisy UI (for UI components)
 - Livewire
 - Bootstrap (for admin dashboard)
 - Tinker (for news creation)
@@ -44,33 +45,54 @@ To clone and set up the Jumantara application on your local machine, follow thes
    composer install
    ```
 
-2. Install Tailwind CSS:
+2. Install Tailwind CSS and Daisy UI:
 
    ```bash
-   npm install && npm run dev
+   npm install && npm install daisyui
    ```
 
-3. Set up Livewire:
+3. Compile assets:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Set up Livewire:
 
    ```bash
    php artisan livewire:install
    ```
 
-4. Set up the database:
+5. Set up Tinker:
+
+   ```bash
+   composer require laravel/tinker
+   ```
+
+   Add the Tinker service provider to your `config/app.php` file:
+
+   ```php
+   'providers' => [
+       // ...
+       Laravel\Tinker\TinkerServiceProvider::class,
+   ],
+   ```
+
+6. Set up the database:
 
    ```bash
    php artisan migrate
    ```
 
-5. Create a `.env` file and configure your database settings.
+7. Create a `.env` file and configure your database settings.
 
-6. Run the application:
+8. Run the application:
 
    ```bash
    php artisan serve
    ```
 
-7. Access the application in your browser at `http://localhost:8000`.
+9. Access the application in your browser at `http://localhost:8000`.
 
 ## Admin Dashboard
 
